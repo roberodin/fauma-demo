@@ -280,6 +280,7 @@
       <div class="mobile-flow-badge" id="mob-flow">Onboarding</div>
       <div class="mobile-counter" id="mob-counter">1 / 25</div>
     </div>
+    <button class="mobile-nav-btn" id="mob-next" onclick="navigate(1)">&rarr;</button>
     <button class="mobile-nav-btn menu-btn" id="mob-menu" onclick="toggleMenu()">&#9776;</button>
   </div>
 </div>
@@ -429,6 +430,7 @@ function updateUI() {
   document.getElementById('mob-flow').textContent = s.flow;
   document.getElementById('mob-counter').textContent = `${currentIndex + 1} / ${screens.length}`;
   document.getElementById('mob-prev').disabled = currentIndex === 0;
+  document.getElementById('mob-next').disabled = currentIndex === screens.length - 1;
   document.getElementById('mobile-progress-bar').style.width = `${((currentIndex + 1) / screens.length) * 100}%`;
 
   updateMenuActive();
