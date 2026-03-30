@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#002022",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#bec8c9",
+                        "primary-fixed-dim": "#8bd2da",
+                        "outline": "#6f797a",
+                        "on-primary-container": "#a1e9f1",
+                        "tertiary-fixed": "#ffdad6",
+                        "surface-variant": "#e8e1dc",
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "on-secondary-container": "#596577",
+                        "surface-container-low": "#f9f2ec",
+                        "surface-container": "#f3ede7",
+                        "surface-tint": "#15686f",
+                        "secondary": "#535f71",
+                        "surface-container-high": "#eee7e1",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "inverse-surface": "#33302c",
+                        "inverse-primary": "#8bd2da",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "on-surface-variant": "#3f484a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffd3cf",
+                        "background": "#fff8f2",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1b18",
+                        "tertiary": "#822d28",
+                        "on-background": "#1e1b18",
+                        "primary-container": "#1a6b72",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#d7e3f9",
+                        "on-secondary-fixed": "#101c2c",
+                        "primary-fixed": "#a6eff6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "primary": "#005258",
+                        "surface-dim": "#dfd9d3",
+                        "on-error": "#ffffff",
+                        "surface": "#fff8f2",
+                        "on-tertiary-fixed": "#410003",
+                        "surface-bright": "#fff8f2",
+                        "inverse-on-surface": "#f6f0ea",
+                        "tertiary-container": "#a1443d",
+                        "surface-container-highest": "#e8e1dc",
+                        "secondary-container": "#d7e3f9",
+                        "coral": "#F4847A"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .coral-cta {
+            background: #F4847A;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed">
+<main class="max-w-md mx-auto min-h-screen flex flex-col items-center justify-center">
+<!-- SUCCESS CONFIRMATION PAGE -->
+<section class="flex flex-col px-6 py-12 items-center text-center w-full">
+<!-- Success Icon Animation Hint -->
+<div class="relative mb-8">
+<div class="size-24 rounded-full bg-primary flex items-center justify-center relative z-10 shadow-lg">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'wght' 600;">check</span>
+</div>
+<!-- Decorative Elements (Particles) -->
+<div class="absolute -top-4 -right-2 size-4 rounded-full bg-coral/40"></div>
+<div class="absolute top-1/2 -left-6 size-3 rounded-full bg-primary/30"></div>
+<div class="absolute -bottom-2 right-1/4 size-2 rounded-full bg-secondary/20"></div>
+</div>
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-3 italic">¡Bienvenido, héroe!</h2>
+<p class="text-secondary leading-relaxed mb-10 max-w-[280px]">
+                Tu suscripción a <span class="text-on-surface font-semibold">Tortuga Caretta caretta</span> ya está activa.
+            </p>
+<!-- Success Summary Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-8 mb-10 flex flex-col gap-6 text-left relative overflow-hidden">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Resumen de Impacto</span>
+<p class="text-primary font-semibold">Nivel: Hermano</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">auto_stories</span>
+<span class="text-sm text-on-surface-variant">Próximo contenido: <span class="font-bold">en 2 días</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">local_shipping</span>
+<span class="text-sm text-on-surface-variant">Tu peluche llegará en <span class="font-bold">7-10 días</span></span>
+</div>
+</div>
+<!-- Abstract Wildlife Texture Background -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/5 rounded-full" style="mask-image: radial-gradient(circle, black, transparent);"></div>
+</div>
+<!-- Success CTAs -->
+<div class="w-full flex flex-col gap-4">
+<button class="coral-cta w-full py-5 rounded-full text-white font-bold text-lg shadow-xl shadow-on-surface/5 active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+                    Conocer a tu tortuga
+                    <span class="material-symbols-outlined">trending_flat</span>
+</button>
+<a class="py-3 text-primary font-bold text-base hover:underline underline-offset-8" href="#">
+                    Ir al inicio
+                </a>
+</div>
+<!-- Ecological Seal -->
+<div class="mt-16 flex items-center justify-center gap-2 opacity-40">
+<span class="material-symbols-outlined text-xs">eco</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold">Fauma Conservation Alliance</span>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fauma — Galería General</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#fff8f2",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e8e1dc",
+                        "surface-tint": "#15686f",
+                        "surface-dim": "#dfd9d3",
+                        "outline": "#6f797a",
+                        "on-secondary-fixed": "#101c2c",
+                        "on-background": "#1e1b18",
+                        "primary-container": "#1a6b72",
+                        "surface-container-low": "#f9f2ec",
+                        "surface-container-highest": "#e8e1dc",
+                        "inverse-surface": "#33302c",
+                        "inverse-on-surface": "#f6f0ea",
+                        "surface-container": "#f3ede7",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "on-surface": "#1e1b18",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-fixed": "#410003",
+                        "on-tertiary-container": "#ffd3cf",
+                        "secondary-container": "#d7e3f9",
+                        "on-secondary-container": "#596577",
+                        "primary": "#1a6b72",
+                        "secondary-fixed": "#d7e3f9",
+                        "secondary": "#535f71",
+                        "on-surface-variant": "#3f484a",
+                        "tertiary": "#f4847a",
+                        "surface": "#fff8f2",
+                        "surface-bright": "#fff8f2",
+                        "outline-variant": "#bec8c9",
+                        "tertiary-container": "#a1443d",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#004f55",
+                        "inverse-primary": "#8bd2da",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eee7e1",
+                        "on-primary-fixed": "#002022",
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "primary-fixed-dim": "#8bd2da",
+                        "on-primary-container": "#a1e9f1",
+                        "primary-fixed": "#a6eff6"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-28">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center px-4 h-16 bg-[#FFF8F2] dark:bg-slate-900 border-b border-[#535F71]/10 dark:border-slate-800 shadow-none">
+<div class="flex items-center gap-4 w-full">
+<button class="text-[#1A6B72] dark:text-[#26a6b5] transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-['Newsreader'] text-2xl font-bold text-[#1A6B72] dark:text-[#26a6b5] flex-grow text-center">Fauma</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-primary/20">
+<img alt="Profile picture" data-alt="close-up portrait of a professional marine biologist smiling in a high-tech lab setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtD2C9mel9Ee29O4QOG6DSQnWR-1Vu9R2phSOdzY9oomhZ9IEWOBZ2mA6Arsttd4HS8XeZx48bSEVLIm-Axddykyyvou4SEI7PWJQWmVTgyWcZBb1d8fsMO5mJLV_QP9QlldlrhyKKZXWsXthgtVYlPlldbLgRMIcMTBhS_8IoUZ0RB4q_HP48WAJZnSUl5PLBH2_8beWW5yRM0uDRf1Be-Au0vgDldaK3JD5rkUKT5xwazFDr-ieCBRkkpSSzVeR8WfrfIJ8lSqYI"/>
+</div>
+</div>
+</header>
+<main class="mt-16">
+<!-- Hero Header -->
+<section class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 grid grid-cols-4 gap-1">
+<img class="h-full w-full object-cover" data-alt="microscopic view of small marine eggs floating in a crystal clear laboratory solution with soft blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9I7RgzE4vPJRNcfKv1gU_qCA3W3f3-U5nUFROGETFwLZLxeMh2cjC9rlT2uboy10xTBbLfy6HxCoTAVasQ4tqMwd7Wu0qyvE3JSv-Pvd7EsDznOTobJxEVbhltteRz4ONSGmd-wD2Y8o6nPmJLzfknkJQoU9ClzzgORu8iSkBZlhkOsPtk0GAmYeR0P8AWwzqtKWRKgAQ5_4iXK-TrhqFIF7aDTG8KFImdL452W5bTtofGsKQjd6Yk5LI1qrnwiY3DciURoALbIZM"/>
+<img class="h-full w-full object-cover" data-alt="professional scientist in blue gloves carefully handling delicate marine biological samples in a clean modern laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp2Q1QnWwn0j4nBR2E1ylPHNnYUzUDWzB2qD4lxh89LT7nbpicREyVW2pda9j0UhC5qtdxLKYXD7PCx6PzIYw3RK5wwlBsmQzU50OB7dGc69qZskfXASXX3cgoMkAGxOKJXNzFHWPHPXlEu9U5CBrEic6obZ4Iv7iwlnkcB-qsIiQ5gjFr8oqalXm9pMl7NPBgW-40L7r-7ComwhLcPhKXcaTjsfZ_TRBY3_JpKG60eT1IqWJM-lD1pMEx6LULoRV5PbKZ67PkHG3h"/>
+<img class="h-full w-full object-cover" data-alt="close-up of specialized laboratory equipment with glowing digital displays and clear glass containers for marine research" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUGeojBtxZqo8tA-PQD7__pJGhj2wnohnozgerWJzMA_8k1GVffNO14-CrA58Y8IzKQackQCC9gfBN_tXFIwYTzyIO0dNI3m6AGNERfa1jDmiCRkPV8mJjCIWwd203WpYyQEzza2rOwDGwPXTcAomuG5JVVOWHYZ4xtFKp4tIgbhF5I7lXa1f_-2EAwqqnfCfzl409SBqzPZVpg1BKV2umcVikk6AMPmCN63F5vtrddEfIZLq6Ri3xvjHIzbW0kkRYU6_CgL5f6dos"/>
+<img class="h-full w-full object-cover" data-alt="underwater view of a small shark embryo inside its transparent egg case attached to sea vegetation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARO2jIGQaPoS1GT3kDYWLj8fEnXAtFJcyNH4ODIa0tnT8wearUW59uVbRz1-YV5lLZ2_5OjOGbTu4smlYVAenQelWR3VmKhS2tstphnupXvVSJPEwE-VbnuSdEQpft11zLANXWW-HHSDMcyaLaoIENvqoZS2Cu6UaIMerfnNor6llskkc2iG-ff-5EXnW-nVswAl7U4sDgONVYII1Yg5YB7ELKkr41yD3hjjfCLK4f-8maMGJ0lb9Bz4LzAlcz2aYS2UDh-L97zijl"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">Nivel Amigo</span>
+<span class="text-white/80 text-sm font-medium">Oceanogràfic</span>
+</div>
+<h2 class="font-headline text-2xl font-bold text-white leading-tight">Desarrollo de huevos de Pintarroja</h2>
+</div>
+</section>
+<!-- Navigation Tabs -->
+<nav class="flex overflow-x-auto hide-scrollbar px-4 py-4 gap-6 bg-surface sticky top-16 z-40 border-b border-surface-container">
+<a class="text-secondary font-medium whitespace-nowrap text-sm" href="#">Timeline</a>
+<a class="text-secondary font-medium whitespace-nowrap text-sm" href="#">Profundizando</a>
+<a class="text-secondary font-medium whitespace-nowrap text-sm" href="#">Equipo</a>
+<a class="text-secondary font-medium whitespace-nowrap text-sm" href="#">Resultados</a>
+<a class="text-primary font-bold whitespace-nowrap text-sm relative" href="#">
+                Galería
+                <span class="absolute -bottom-[17px] left-0 w-full h-1 bg-primary rounded-t-full"></span>
+</a>
+</nav>
+<!-- Stats and Filters -->
+<section class="px-4 py-6 flex flex-col gap-4">
+<div class="bg-surface-container-low px-6 py-3 rounded-full flex justify-between items-center shadow-sm">
+<div class="flex flex-col items-center">
+<span class="text-on-surface font-bold text-sm">47</span>
+<span class="text-secondary text-[10px] uppercase font-semibold">fotos</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface font-bold text-sm">8</span>
+<span class="text-secondary text-[10px] uppercase font-semibold">vídeos</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="text-on-surface font-bold text-sm">3</span>
+<span class="text-secondary text-[10px] uppercase font-semibold">documentos</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar">
+<button class="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md">Todo</button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-xs font-medium hover:bg-surface-container-highest transition-colors flex items-center gap-1.5">
+<span class="text-[14px]">📸</span> Fotos
+                    </button>
+<button class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-xs font-medium hover:bg-surface-container-highest transition-colors flex items-center gap-1.5">
+<span class="text-[14px]">📹</span> Vídeos
+                    </button>
+</div>
+<button class="flex items-center gap-1 text-primary font-semibold text-xs ml-4 whitespace-nowrap">
+                    Recientes <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Gallery Content -->
+<div class="px-4 flex flex-col gap-10">
+<!-- Phase 3 (Active/Current) -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2 mb-0.5">
+<h3 class="font-headline text-xl font-bold text-on-surface">Fase 3 — Monitorización</h3>
+<span class="bg-tertiary text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Nueva</span>
+</div>
+<p class="text-secondary text-xs font-medium">17 archivos en esta etapa</p>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-xl overflow-hidden shadow-sm transition-transform active:scale-95">
+<img class="w-full h-full object-cover" data-alt="extreme close-up of a shark embryo visible through a translucent egg case with vibrant orange yolk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrR74Q1HwaA4KPY099up3Hq2sX88lxUkGNsPwbAb80rD2NQ7L2VRwsSqKV_0F7NDcH_ESBcQOJLr6IDhUpzDXp2INHOyxFRnrkIJtomd1PrXVEkDRPjCN5RC8rQ0WNMOZFY03tLFpFI8Cu5Nc03mDAdHrGH2Vmx2P78RuNBrSO4o0qLDv3lo8fRu_XfyQCrvPDkzi4-s43R4IggLDZMw0oCfjwLd8OhKRmS0hSGTDYMLzgISkWNcXnq3Hqy0ZQ0znXtIhjzfDSX4bK"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-sm transition-transform active:scale-95">
+<img class="w-full h-full object-cover" data-alt="microscope view of cellular division in a marine organism with fluorescent lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ZXwbeTlgytYiLkBJfWAJq7SDdEPc4xOXqgJpCPmZcx4-UuDGLkGeFFe6hchGRHxkkQ0M5ftWYCYUwykxbSjjIbvOV4NWq6_ZMcHD2Oee1gEm-xDmMF8_PgwA9_W4K-EbT16fQ-J9MaWOVyaD7MjxYZUZxjN3NpgiTKKQpxsPxFZMI3w1QIV5VVB58MzkyirMUqlyVPYSJbstgYdNDjIXqRiBWg0DeDTFaES4XMGj-wn7SPnZTGHDg0_6dAMmcox_OeipJzv1Mq9f"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden shadow-sm transition-transform active:scale-95">
+<img class="w-full h-full object-cover" data-alt="a marine biologist looking through a high-end microscope in a dimly lit modern laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3BnG3UTQaKniLvfMOXcuM0jWnRXuXuO-oCtLRDu1Wy6EODYJt__XED_BJ-Zux2C9jpOPsLpFyeQgHXahDy4f-i0Bcf3eoYyLBRZckRNw2V6IlmtJTgMLXcBkwi_Uo4N4bw7E3tGLKOigviF9qPHKEUNBogjgKWQt4fmRjOpx4NLpCpMXg2wBmgTb4aptuorexQ5SmBd6mJWFrlRZFam3SrxPRjoOVLVuIUhrsoScNUbtR55ESvcYflBi93KfFZppVUKlvBWkIOHI"/>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-video shadow-lg group">
+<img class="w-full h-full object-cover" data-alt="stunning time-lapse style shot of shark development inside the egg with soft ethereal lighting and deep blue water background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbmtx3j5fJC0T2L5gsWhctF17wiC6YLXqg61f7u5Yv_v8TlVieV0qGRJwZ21ffNLQqRup0bXSCqeIpGx_CCGXH08Zax_jYY9vWDm5oCuTgrRQ4DdtaEI56ah_oPs7z3J23RnPrlfK9K-MHnfVAMs6h4OBsNiaMEoUnKg_E1ww4Eu_V_Sjq777YNwt5aJrtDo-_eBF95I1In5wI5Qgck225RJJZHYW4mtFm800veXpGNG5YjhxYBOE7mYArrSBz2YFCHcGrKr8wnC6F"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center transition-colors group-hover:bg-black/20">
+<div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/40 group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-center text-white">
+<span class="text-xs font-semibold bg-black/40 px-2 py-1 rounded-md backdrop-blur-sm">Time-lapse: 30 días</span>
+<span class="text-xs font-bold bg-black/40 px-2 py-1 rounded-md backdrop-blur-sm">4:12</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-2xl p-4 flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="text-on-surface font-semibold text-sm">📄 Informe preliminar Fase 3</p>
+<p class="text-secondary text-[10px] uppercase font-bold tracking-tight">PDF · 2.4 MB</p>
+</div>
+</div>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</section>
+<!-- Phase 2 -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface">Fase 2 — Incubación</h3>
+<p class="text-secondary text-xs font-medium">18 archivos en esta etapa</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="rows of neatly organized incubation tanks for marine life in a temperature-controlled scientific facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTtkgGNWbybBo274UM8QJiauJHv3dHZBYpYV5q1kY4ueNHI17XmOk5TkwIYKse0HFU2HQxTR4VDIYnfgYv5wC785GbqrBuezrWYbqwz1dkA0ZX00jGST2ZHdr0BUhXqwi0_ODbHcju6vU5pAjtJIlXv2ONc7cGdBF2AStaqVSv3heyqmWnIkVuWwXFUnZ3bhTt7GMoQaA0DAzcIhwKib94jvIiYbFBPvsQz0AFK-QxfCY_xZzb-LIXMikRkwgn2rxDzfWTP8v-H3nA"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden bg-primary/5 flex items-center justify-center border-2 border-primary/10 group active:scale-95 transition-transform">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract blurred view of marine laboratory with warm glowing lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBknQlQ9SqEJCCj1kXxuOCg4NSKYIfG6yX_PXPbA6jbZrWXn_2MNvcM7o64uImC5fnoBoPlMZKmEABTbFzx7IFYfVSlM51P2Sz_DqLC1M19CryU01o6tDBmsdYSZp01Q5iiLNjIouoJA8LNDF0ZDKC-0Ou603Gxhnl4KVnVuF8Eo9ARru_ucETP0AINhv1hCCGdneYkFodRfoR682zX-H_0_Xa0BfvyKh9HCCEO9gKTBJAvWlY7_1pAik-yHiUY3wEfQ7_u4V6VpzAa"/>
+<div class="absolute flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="text-[8px] font-bold text-primary uppercase mt-1">Video</span>
+</div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="technical chart showing growth rates and temperature stability for marine incubation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAumj2romfrtipfIwDUINxlN1RvPHZGbxKVYgmJGcOzCcCFPV2pPemnN8nHsW3CcyqPmM52ClPDYTFhTYb7b04vPDJJsO5QrW48cufkGwi1N1dcTXHsZQwMcKWK08tI_Djp62KC-h6KbBQ9VZK5cD02iMRBp424EEC-Z64Pcom7ZdQTtiAAEXidEbU_NXOvmK7UvRZMczYxUhBPMzOQ3Ld8PiNGYASI5_L6b-oMLeoN-Gk4QT8Ju9PoXaWIhAFlltkWs_QodMLZEtS7"/>
+</div>
+</div>
+</section>
+<!-- Phase 1 -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface">Fase 1 — Recolección</h3>
+<p class="text-secondary text-xs font-medium">12 archivos en esta etapa</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="wide shot of marine collection expedition at dawn with scientists on a research vessel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvkH5AR7Tjm-Yqz6_9n16I3HO3dfAthv30JtYMEgydpsmhVMfQKhsp5i-vD8BFhx26zxBTmnwUJIhbyt_OIhTLfqJeDAJPPGnzXORU2uEqOc84WUjcS--1EGqlPOElOrLBJbAGS_lDspoTAbwbFOhFF1Fy1dhDLQqlDbz4K2tclaJneBVb4Zk3Wx0YUEbzg6obdN2fLc81MGUDVhJwdvEdhW0tNAokkNYOIG4JYoGrmKE2pf1N2V3gaqRQjWxqNk0EAxtE0-E4l9eV"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of glass specimen jars filled with marine samples on a wooden workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxUyoiypR3BU7PhUWoOY7Nmv1QSk7c0sWbUJ2HR7KrHGynWnzXb3ZeAnAkfMJqNIDzAWQ_GB1CwYOGBcS840wxGzB3HqCN1VB5cj6DZGWw_m3M6_mJPIQipUfP52Iw7Fo20rRGmmwt19-btSXrdyWWh3St5WmtF9RB9gFnHgx3v6SDNOyC-arbXLmReZTFiUDaRKR8aHi1FAlH8qJxUS5FtJDlzh9NbbTqowsEbHoOuacdKHpi2cLY5CwZ29kueDFS81Zk-yMQ-4lE"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="team of scientists collaborating around a large table with field notes and laptops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9IZwQTCwhhxZqpbe-9CCGUZFZphJG9QPop4iMELPvaWOv-acmgFf8SUnXKCjVyHRZQXMgUgVyvKTzUuEqFlwXsNmRBgMVORJ9113H6zNpYcQSLEfNfVel4xpG3u_2_j1RKUuERbP9r3mSd_DOZGi756sE6-klCOxh89S3UEXHsDEaVMWAe5DI1r6uNEG0MkYW0HZ-u_g6Es7-IZP9do-ucOys8U63-VpWTt-BTVIJN-K3k8cqConQuWpKHs9MfgkXhR_QCrT8_XHd"/>
+</div>
+</div>
+</section>
+<!-- Phase 4 (Locked) -->
+<section class="flex flex-col gap-4 pb-12">
+<div class="flex items-center justify-between opacity-40">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-xl font-bold text-on-surface">Fase 4 — Eclosión</h3>
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+<span class="text-secondary text-[10px] uppercase font-bold tracking-wider">Próximamente</span>
+</div>
+<div class="h-24 rounded-2xl bg-surface-container border border-dashed border-outline-variant flex items-center justify-center">
+<p class="text-secondary text-xs font-medium italic">Contenido bloqueado hasta el inicio de fase</p>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#FFF8F2] dark:bg-slate-950 border-t border-[#535F71]/10 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-[32px]">
+<a class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1.5 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] transition-transform duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1.5 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] transition-transform duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-xs font-medium">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1A6B72] text-white rounded-full px-5 py-1.5 dark:bg-[#26a6b5] dark:text-slate-950 transition-transform duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-['Inter'] text-xs font-medium">Mis Animales</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1.5 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] transition-transform duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-xs font-medium">Perfil</span>
+</a>
+</nav>
+</body></html>

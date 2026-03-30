@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#002022",
+                        "surface-tint": "#15686f",
+                        "inverse-primary": "#8bd2da",
+                        "surface-container": "#f3ede7",
+                        "inverse-surface": "#33302c",
+                        "on-secondary-container": "#596577",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "surface-bright": "#fff8f2",
+                        "secondary-container": "#d7e3f9",
+                        "secondary-fixed": "#d7e3f9",
+                        "surface-container-low": "#f9f2ec",
+                        "on-surface-variant": "#3f484a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "surface-container-highest": "#e8e1dc",
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#a1443d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eee7e1",
+                        "primary-fixed-dim": "#8bd2da",
+                        "primary-container": "#1a6b72",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-surface": "#1e1b18",
+                        "inverse-on-surface": "#f6f0ea",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e8e1dc",
+                        "outline-variant": "#bec8c9",
+                        "background": "#fff8f2",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#410003",
+                        "on-surface-variant": "#3f484a",
+                        "primary": "#005258",
+                        "secondary": "#535f71",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-primary-container": "#a1e9f1",
+                        "on-background": "#1e1b18",
+                        "surface": "#fff8f2",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "outline": "#6f797a",
+                        "tertiary": "#822d28",
+                        "on-secondary-fixed": "#101c2c",
+                        "primary-fixed": "#a6eff6",
+                        "surface-dim": "#dfd9d3",
+                        "living-coral": "#F4847A"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #005258 0%, #1a6b72 100%);
+        }
+        .coral-gradient {
+            background: linear-gradient(135deg, #F4847A 0%, #e57368 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed">
+<main class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-12">
+<!-- Shared Component: TopAppBar Logic (Modified for context as Focused View) -->
+<div class="flex items-center bg-transparent p-4 pb-2 justify-between">
+<div class="text-on-surface flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-2xl" data-icon="arrow_back">arrow_back</span>
+</div>
+<div class="flex-1 flex justify-center pr-12">
+<div class="text-primary flex size-8 items-center" data-icon="FacebookLogo">
+<svg fill="currentColor" height="32px" viewbox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Editorial Header -->
+<header class="px-6 pt-8 pb-6 text-center">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface mb-2">Bienvenido a Fauma</h1>
+<p class="font-body text-secondary text-lg">Inicia sesión o crea tu cuenta</p>
+</header>
+<!-- Social Auth Section -->
+<section class="px-6 flex flex-col gap-3 max-w-md mx-auto w-full">
+<button class="flex items-center justify-center gap-3 h-14 rounded-full bg-surface-container-lowest text-on-surface font-semibold text-base transition-colors hover:bg-surface-container-high">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google 'G' logo icon with its signature four colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZOe0LYPk-_ctgN8MD_oxFb4I8gHI1sdHo3VVuIKbkXQSIglBYca35hAPbO54EtPcw9WMZ0hYev-TqziHm_B5YVey6u956vq36N-971X46PGnRPGy434AXZcBn5lxxFQ7caVRnfEZeMSVRYhT8Rs24HYCEUgR1wvr7RvIRvLl-nXLvF-3PRqO6EiYZ-MI7r2QoRYehKJ16takk8iReukuHblUC7ZsAKI7fCdTim6nd_9OnhgrmQTdGPl_2rgAAmPKjT0F74g-_7vT"/>
+<span>Continuar con Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 h-14 rounded-full bg-inverse-surface text-inverse-on-surface font-semibold text-base transition-colors hover:bg-on-surface">
+<span class="material-symbols-outlined" data-icon="apple" data-weight="fill" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span>Continuar con Apple</span>
+</button>
+</section>
+<!-- Divider -->
+<div class="px-6 py-8 flex items-center justify-center gap-4 max-w-md mx-auto w-full">
+<div class="h-[1px] flex-1 bg-outline-variant opacity-30"></div>
+<span class="font-label text-sm text-secondary uppercase tracking-widest font-bold">o</span>
+<div class="h-[1px] flex-1 bg-outline-variant opacity-30"></div>
+</div>
+<!-- Email Form Section -->
+<form class="px-6 flex flex-col gap-4 max-w-md mx-auto w-full">
+<div class="flex flex-col gap-1.5">
+<input class="h-14 px-6 rounded-full border-none bg-surface-container-low text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all duration-300" placeholder="tu@email.com" type="email"/>
+</div>
+<div class="relative flex flex-col gap-1.5">
+<input class="h-14 px-6 rounded-full border-none bg-surface-container-low text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all duration-300" placeholder="Contraseña" type="password"/>
+<button class="absolute right-6 top-4 text-outline hover:text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<button class="coral-gradient h-14 mt-4 rounded-full text-white font-bold text-lg tracking-wide shadow-lg shadow-living-coral/20 hover:scale-[1.02] active:scale-[0.98] transition-all" type="submit">
+                Iniciar Sesión
+            </button>
+</form>
+<!-- Secondary Links -->
+<nav class="mt-8 flex flex-col items-center gap-4 px-6">
+<a class="text-primary font-semibold text-sm tracking-tight border-b border-living-coral/0 hover:border-living-coral transition-all" href="#">
+                ¿No tienes cuenta? Regístrate
+            </a>
+<a class="text-primary font-semibold text-sm tracking-tight border-b border-living-coral/0 hover:border-living-coral transition-all" href="#">
+                ¿Olvidaste tu contraseña?
+            </a>
+</nav>
+<!-- Spacer -->
+<div class="flex-grow min-h-[40px]"></div>
+<!-- Gift Code Section -->
+<section class="px-6 mt-12 max-w-md mx-auto w-full">
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col gap-4 relative overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute -right-4 -top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" data-icon="featured_seasonal">featured_seasonal_and_gifts</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-2xl">🎁</span>
+<h3 class="font-body font-semibold text-on-surface">¿Tienes un código regalo?</h3>
+</div>
+<div class="flex gap-2">
+<input class="flex-1 h-12 px-5 rounded-full border-none bg-surface-container-lowest text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20" placeholder="Código" type="text"/>
+<button class="signature-gradient px-6 h-12 rounded-full text-white font-bold text-sm hover:opacity-90 transition-opacity">
+                        Canjear
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>

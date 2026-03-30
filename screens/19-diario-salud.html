@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#596577",
+              "on-tertiary-container": "#ffd3cf",
+              "secondary-fixed": "#d7e3f9",
+              "inverse-on-surface": "#f6f0ea",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#004f55",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e8e1dc",
+              "tertiary": "#822d28",
+              "primary-container": "#1a6b72",
+              "on-primary-fixed": "#002022",
+              "on-error": "#ffffff",
+              "inverse-primary": "#8bd2da",
+              "tertiary-fixed": "#ffdad6",
+              "surface-container": "#f3ede7",
+              "surface-container-low": "#f9f2ec",
+              "surface": "#fff8f2",
+              "primary": "#005258",
+              "outline": "#6f797a",
+              "on-secondary-fixed": "#101c2c",
+              "tertiary-fixed-dim": "#ffb4ac",
+              "surface-tint": "#15686f",
+              "surface-dim": "#dfd9d3",
+              "outline-variant": "#bec8c9",
+              "on-primary-container": "#a1e9f1",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fff8f2",
+              "primary-fixed": "#a6eff6",
+              "background": "#fff8f2",
+              "on-secondary-fixed-variant": "#3c4859",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "on-background": "#1e1b18",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#bbc7dc",
+              "primary-fixed-dim": "#8bd2da",
+              "surface-container-highest": "#e8e1dc",
+              "on-surface": "#1e1b18",
+              "tertiary-container": "#a1443d",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#410003",
+              "on-surface-variant": "#3f484a",
+              "surface-container-high": "#eee7e1",
+              "inverse-surface": "#33302c",
+              "secondary-container": "#d7e3f9",
+              "on-primary": "#ffffff",
+              "secondary": "#535f71"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body pb-32">
+<!-- Top AppBar (JSON Logic) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-teal-100 dark:border-teal-900 h-16">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-teal-50 rounded-full transition-transform active:scale-95">
+<span class="material-symbols-outlined text-teal-800 dark:text-teal-400">arrow_back</span>
+</button>
+<h1 class="font-serif font-bold text-lg text-teal-800 dark:text-teal-400">Mis Animales</h1>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-teal-50 rounded-full transition-transform active:scale-95">
+<span class="material-symbols-outlined text-teal-800 dark:text-teal-400">more_vert</span>
+</button>
+</header>
+<main class="mt-16">
+<!-- Hero Header -->
+<section class="relative h-56 w-full overflow-hidden">
+<img alt="Caretta caretta turtle swimming" class="w-full h-full object-cover" data-alt="Close-up of a majestic Caretta caretta sea turtle swimming through turquoise tropical waters with sunlight filtering from the surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPf50l0s3CDTJvDdIYWEde2IDIqh5tJ5YKCXMMrOhX209RtYn9eEHchVyWIblo_3YLPztPMtjVrM_EFfa179gvNSAjXtfh_szgRSfX3YbEk_nmzglmMtgmZg4x6tML1el4C6NlxFPruP1oznonjbtYwq-BtgTIJ1Ma1IpFei15X7SiffYVWxu3XWN_CgVeTbELtEhQ5y8GvNE9xgKJ6D1PIW8IEIkEXZxpDRR0hhVicmoOauMOm-KeRLkCxMVJkxyniUIU5c7DQAoX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 pb-4">
+<div class="flex items-center gap-3">
+<h2 class="font-headline text-3xl font-bold text-white tracking-tight">Tortuga Caretta caretta</h2>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold font-label uppercase tracking-widest">Hermano</span>
+</div>
+</div>
+</section>
+<!-- Content Tabs -->
+<nav class="sticky top-16 bg-background/95 backdrop-blur-sm z-40 border-b border-outline-variant/30">
+<div class="flex overflow-x-auto hide-scrollbar px-4 py-4 gap-2">
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors">Ficha Técnica</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors">Galería</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors">Curiosidades</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold bg-primary text-white shadow-md">Diario de Salud</button>
+</div>
+</nav>
+<div class="px-6 space-y-10 py-6">
+<!-- Estado Actual -->
+<section>
+<h3 class="font-headline text-2xl text-primary mb-4">Estado actual</h3>
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/20 flex items-center gap-5 shadow-sm">
+<div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full">
+<span class="material-symbols-outlined text-green-600 text-3xl font-bold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="text-green-700 font-bold text-lg font-label">Estado: Saludable</p>
+<p class="text-secondary text-sm font-medium">Última revisión: 12 Mar 2027</p>
+</div>
+</div>
+</section>
+<!-- Bitácora Veterinaria -->
+<section>
+<h3 class="font-headline text-2xl text-primary mb-6">Bitácora Veterinaria</h3>
+<div class="space-y-8 relative before:content-[''] before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/30">
+<!-- Entry 1 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-primary border-4 border-background flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">12 Mar, 2027</span>
+<img alt="Dr. Javier López" class="w-8 h-8 rounded-full border-2 border-white shadow-sm object-cover" data-alt="Close-up professional portrait of a veterinarian in a lab coat with a warm and confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLIf4xw2z27kNMcfRq-FavHglR8HD9cY_BRuJTURcckMrbqlsMz6I-x1k1EdP2fl3ElnTzpftF2Rx0tfN2F-oq_PaPr_9Dq8llMAS8C_fhiy1eVeQF_ldA0YKfxR0RauJoCWBjHVIGaj3gbLKprOCDZmdrKiO_5IeeFTUfuUbQ2J846nRiPUnJzUTDpI3cSW1HMiHIxrLApfO48aGIOp2qfD06FFTv_H6qIukFLUH8p91lTjI1_fOKTgarNMmUSqDog9ppt5E9CToU"/>
+</div>
+<h4 class="font-bold text-on-surface mb-2 font-label">Revisión trimestral</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Peso registrado: <span class="font-bold text-primary">138kg</span>. El estado del caparazón es óptimo, sin parásitos externos. Muestra comportamiento activo de pre-anidación.
+                            </p>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-outline-variant border-4 border-background flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-white"></span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg opacity-80">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">15 Dic, 2026</span>
+<h4 class="font-bold text-on-surface mb-2 font-label">Control post-temporada</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Recuperación exitosa tras temporada de desove. Valores sanguíneos dentro de los parámetros normales de la especie.
+                            </p>
+</div>
+</div>
+<!-- Entry 3 (Locked) -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-outline-variant/30 border-4 border-background flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-white">lock</span>
+</div>
+<div class="bg-surface-container-low/50 p-5 rounded-lg border border-dashed border-outline-variant">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">8 Sep, 2026</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full text-[9px] font-black uppercase">Disponible en nivel Héroe</span>
+</div>
+<div class="space-y-2 blur-[4px] select-none">
+<div class="h-3 bg-slate-200 rounded w-full"></div>
+<div class="h-3 bg-slate-200 rounded w-3/4"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gráficos de Salud -->
+<section>
+<h3 class="font-headline text-2xl text-primary mb-4">Gráficos de Salud</h3>
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/20 shadow-sm">
+<h4 class="text-sm font-bold text-on-surface-variant mb-6 font-label">Evolución del peso (últimos 12 meses)</h4>
+<div class="relative h-40 w-full flex items-end justify-between gap-1 px-2">
+<!-- Chart Mockup -->
+<div class="w-full h-full absolute inset-0 flex flex-col justify-between py-2">
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+</div>
+<!-- SVG Line Chart Path -->
+<svg class="absolute inset-0 w-full h-full drop-shadow-lg" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q10,75 20,78 T40,65 T60,50 T80,45 T100,42" fill="none" stroke="#1A6B72" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="20" cy="78" fill="#1A6B72" r="1.5"></circle>
+<circle cx="40" cy="65" fill="#1A6B72" r="1.5"></circle>
+<circle cx="60" cy="50" fill="#1A6B72" r="1.5"></circle>
+<circle cx="80" cy="45" fill="#1A6B72" r="1.5"></circle>
+<circle cx="100" cy="42" fill="#1A6B72" r="3"></circle>
+</svg>
+<div class="absolute bottom-0 right-0 bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded">138.4 kg</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] text-outline font-bold uppercase tracking-tighter">
+<span>Mar 26</span>
+<span>Jun 26</span>
+<span>Sep 26</span>
+<span>Dic 26</span>
+<span>Mar 27</span>
+</div>
+</div>
+</section>
+<!-- Enciclopedia Veterinaria -->
+<section class="pb-8">
+<h3 class="font-headline text-2xl text-primary mb-4">Enciclopedia Veterinaria</h3>
+<div class="space-y-3">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="text-xl">🩺</span>
+<span class="font-bold text-on-surface-variant font-label">Enfermedades comunes</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="text-xl">💊</span>
+<span class="font-bold text-on-surface-variant font-label">Tratamientos y cuidados</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="text-xl">📊</span>
+<span class="font-bold text-on-surface-variant font-label">Parámetros biométricos normales</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="bg-surface-container-low/60 p-4 rounded-lg flex items-center justify-between opacity-70">
+<div class="flex items-center gap-3">
+<span class="text-xl">🔬</span>
+<div class="flex flex-col">
+<span class="font-bold text-on-surface-variant font-label">Análisis de laboratorio</span>
+<span class="text-[9px] font-bold text-tertiary-container uppercase">Nivel Héroe</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline/50">lock</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (JSON Logic) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-3 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl rounded-t-[40px] border-t border-white/20 dark:border-slate-800/50 shadow-2xl dark:shadow-none">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 px-4 py-1 hover:text-teal-800 transition-all duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-sans text-xs font-semibold">Home</span>
+</a>
+<!-- Explorar -->
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 px-4 py-1 hover:text-teal-800 transition-all duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-sans text-xs font-semibold">Explorar</span>
+</a>
+<!-- Mis Animales (Active) -->
+<a class="flex flex-col items-center justify-center bg-teal-600 dark:bg-teal-500 text-white rounded-full px-4 py-1 transition-all duration-300 active:scale-90 shadow-lg" href="#">
+<span class="material-symbols-outlined mb-0.5" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-sans text-[10px] font-bold">Mis Animales</span>
+</a>
+<!-- Perfil -->
+<a class="flex flex-col items-center justify-center text-slate-600 dark:text-slate-400 px-4 py-1 hover:text-teal-800 transition-all duration-300 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-sans text-xs font-semibold">Perfil</span>
+</a>
+</nav>
+</body></html>

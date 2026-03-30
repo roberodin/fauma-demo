@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700;1,6..72,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002022",
+              "outline": "#6f797a",
+              "primary-fixed-dim": "#8bd2da",
+              "outline-variant": "#bec8c9",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffdad6",
+              "on-primary-container": "#a1e9f1",
+              "secondary-fixed-dim": "#bbc7dc",
+              "surface-variant": "#e8e1dc",
+              "surface-container-low": "#f9f2ec",
+              "on-secondary-container": "#596577",
+              "surface-tint": "#15686f",
+              "surface-container": "#f3ede7",
+              "on-primary-fixed-variant": "#004f55",
+              "surface-container-high": "#eee7e1",
+              "secondary": "#535f71",
+              "inverse-surface": "#33302c",
+              "on-secondary-fixed-variant": "#3c4859",
+              "inverse-primary": "#8bd2da",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "on-surface-variant": "#3f484a",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#ffd3cf",
+              "on-primary": "#ffffff",
+              "background": "#fff8f2",
+              "on-surface": "#1e1b18",
+              "error-container": "#ffdad6",
+              "on-background": "#1e1b18",
+              "tertiary": "#822d28",
+              "primary-container": "#1a6b72",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#a6eff6",
+              "on-secondary-fixed": "#101c2c",
+              "secondary-fixed": "#d7e3f9",
+              "on-tertiary": "#ffffff",
+              "primary": "#005258",
+              "tertiary-fixed-dim": "#ffb4ac",
+              "surface-dim": "#dfd9d3",
+              "on-error": "#ffffff",
+              "surface": "#fff8f2",
+              "surface-bright": "#fff8f2",
+              "inverse-on-surface": "#f6f0ea",
+              "on-tertiary-fixed": "#410003",
+              "secondary-container": "#d7e3f9",
+              "tertiary-container": "#a1443d",
+              "surface-container-highest": "#e8e1dc",
+              "living-coral": "#F4847A"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FFF8F2;
+            color: #1E1B18;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(30, 27, 24, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center">
+<!-- Top Navigation Anchor (Manual for Onboarding Context) -->
+<header class="w-full max-w-md flex justify-between items-center px-8 py-8 sticky top-0 z-50 bg-[#FFF8F2]/80 backdrop-blur-md">
+<h1 class="font-headline italic text-2xl tracking-tight text-primary">THE LIVING ARCHIVE</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="menu_open">menu_open</span>
+</div>
+</header>
+<main class="w-full max-w-md px-6 flex-grow flex flex-col">
+<!-- Hero Section: Asymmetric Editorial Layout -->
+<section class="relative mb-12">
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Nivel 03 — El Descubrimiento</span>
+<h2 class="font-headline italic text-5xl text-on-surface leading-[1.1] tracking-tight pr-12">
+                    Descubre contenido <span class="text-primary">exclusivo.</span>
+</h2>
+</div>
+<!-- Content Preview Cards (Bento/Asymmetric Style) -->
+<div class="mt-10 grid grid-cols-12 gap-4">
+<!-- Video/Image Large Plate -->
+<div class="col-span-12 rounded-xl overflow-hidden relative h-64 editorial-shadow bg-surface-container-high group">
+<img alt="Scientific documentation" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" data-alt="Cinematic close-up of a majestic lion in high grass during golden hour with dramatic lighting and professional nature documentary aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhwBAi9r31_YqYmH28KhKf9PCKXY-gkRGDVe_Lk33z0VWWs81n6oOdo5Q5nqPQBn-cK7D0PviYYOoEqZ4JVrvqB7VdfUhqMOmYx7sshYuNR9blhw3A5ZHlr3sqKWvy7PHhz4hsJDJfftwQWK1k4ngIkU8Fj2WxtFrHmz2Ek5OWv8N2MAuRgpIJ9EBxeyvJesFDYDiOnGYEvLtLkB9c2Spf0FPPTCrO5Jz_FVVC4X3ClOW-tcsLZu3nwvW5TdnFwP31h7X48LRt40y2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-label text-[10px] font-bold tracking-widest uppercase">Documental</span>
+<span class="text-white/80 text-xs font-body">El rugido del Serengueti</span>
+</div>
+</div>
+</div>
+<!-- Scientific Plate (Small Left) -->
+<div class="col-span-7 bg-surface-container-low rounded-lg p-5 flex flex-col justify-between h-44 border border-outline-variant/10">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="analytics">analytics</span>
+<span class="font-label text-[9px] font-bold text-secondary uppercase">Métrica Bio</span>
+</div>
+<div>
+<p class="font-headline italic text-lg text-on-surface leading-tight">Migración estacional detectada</p>
+<p class="text-[11px] text-secondary mt-1 font-body leading-relaxed">+12% Actividad en zona norte</p>
+</div>
+</div>
+<!-- Physical Merch Plate (Small Right) -->
+<div class="col-span-5 bg-tertiary-fixed rounded-lg p-5 flex flex-col items-center justify-center text-center h-44 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-tertiary/40 text-4xl rotate-12" data-icon="apparel">apparel</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-2xl mb-2" data-icon="redeem">redeem</span>
+<span class="font-label text-[9px] font-bold text-tertiary uppercase tracking-tighter">Merch VIP</span>
+</div>
+</div>
+</section>
+<!-- Description Text -->
+<section class="mb-12">
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                Fotos, vídeos, datos científicos, curiosidades... y <span class="font-bold text-on-surface">merchandising físico</span> en los niveles más altos.
+            </p>
+</section>
+<!-- Footer Actions -->
+<footer class="mt-auto pb-10 flex flex-col items-center gap-10">
+<!-- Progress Indicator -->
+<div class="flex gap-3">
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+<div class="w-8 h-1.5 rounded-full bg-primary transition-all duration-500"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full py-6 rounded-full bg-living-coral text-white font-headline italic text-xl shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center justify-center gap-3">
+                Empezar
+                <span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Secondary Action -->
+<button class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary font-bold hover:text-primary transition-colors">
+                Omitir introducción
+            </button>
+</footer>
+</main>
+<!-- Decorative Texture (Subtle Grain) -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+</body></html>

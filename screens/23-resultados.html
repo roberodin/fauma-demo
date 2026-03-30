@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resultados - Proyecto Pintarroja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d7e3f9",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#8bd2da",
+              "on-tertiary-fixed": "#410003",
+              "surface-dim": "#dfd9d3",
+              "on-primary-fixed-variant": "#004f55",
+              "surface-container-low": "#f9f2ec",
+              "primary-fixed": "#a6eff6",
+              "on-surface-variant": "#3f484a",
+              "on-secondary-fixed-variant": "#3c4859",
+              "tertiary-fixed-dim": "#ffb4ac",
+              "on-secondary-fixed": "#101c2c",
+              "surface-variant": "#e8e1dc",
+              "primary": "#005258",
+              "outline-variant": "#bec8c9",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-primary-container": "#a1e9f1",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e8e1dc",
+              "background": "#fff8f2",
+              "on-secondary-container": "#596577",
+              "tertiary-container": "#a1443d",
+              "surface-container": "#f3ede7",
+              "surface": "#fff8f2",
+              "on-surface": "#1e1b18",
+              "tertiary": "#822d28",
+              "primary-container": "#1a6b72",
+              "surface-bright": "#fff8f2",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#33302c",
+              "surface-tint": "#15686f",
+              "inverse-primary": "#8bd2da",
+              "inverse-on-surface": "#f6f0ea",
+              "secondary-fixed": "#d7e3f9",
+              "secondary": "#535f71",
+              "on-background": "#1e1b18",
+              "tertiary-fixed": "#ffdad6",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#bbc7dc",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "outline": "#6f797a",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002022",
+              "on-tertiary-container": "#ffd3cf",
+              "surface-container-high": "#eee7e1"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Newsreader', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-orange-50 dark:bg-slate-950 shadow-sm border-b border-teal-100 dark:border-slate-800 fixed top-0 w-full z-50 flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-teal-800 dark:text-teal-400 p-2 hover:bg-teal-50 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold font-serif text-teal-800 dark:text-teal-400">Resultados</h1>
+</div>
+<button class="text-teal-800 dark:text-teal-400 p-2 hover:bg-teal-50 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</header>
+<main class="pt-20 px-4 max-w-5xl mx-auto space-y-8">
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col items-center justify-center text-center space-y-3 border border-outline-variant/30">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-3xl">set_meal</span>
+</div>
+<div>
+<p class="text-3xl font-headline font-bold text-primary">100</p>
+<p class="text-sm font-label text-on-surface-variant">Huevos rescatados</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg flex flex-col items-center justify-center text-center space-y-3 border border-outline-variant/30">
+<div class="w-16 h-16 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-3xl font-headline font-bold text-tertiary">87%</p>
+<p class="text-sm font-label text-on-surface-variant">Supervivencia</p>
+</div>
+</div>
+<div class="bg-secondary-container p-6 rounded-lg flex flex-col items-center justify-center text-center space-y-3 border border-outline-variant/30">
+<div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div>
+<p class="text-xl font-headline font-bold text-on-secondary-container leading-tight">Desarrollo Óptimo</p>
+<p class="text-sm font-label text-on-surface-variant">Análisis Craneal</p>
+</div>
+</div>
+</section>
+<!-- Progress Chart Section -->
+<section class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-2xl font-bold text-on-surface">Progresión de Eclosión Mensual</h2>
+<p class="text-sm text-on-surface-variant">Seguimiento de nacimientos acumulados 2024</p>
+</div>
+<div class="flex gap-2">
+<span class="inline-block w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-label text-on-surface-variant">Eclosiones</span>
+</div>
+</div>
+<div class="relative h-64 w-full flex items-end justify-between gap-2 pt-4">
+<!-- Simple custom SVG Area Chart Representation -->
+<div class="absolute inset-0 flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q25,75 50,40 T100,20 L100,100 L0,100 Z" fill="rgba(26, 107, 114, 0.1)"></path>
+<path d="M0,80 Q25,75 50,40 T100,20" fill="none" stroke="#1A6B72" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Labels -->
+<div class="flex w-full justify-between mt-auto pt-2 z-10 text-[10px] font-label text-outline uppercase tracking-wider">
+<span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span>
+</div>
+</div>
+</section>
+<!-- Behind the Scenes Gallery -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold">Tras las cámaras</h2>
+<button class="text-primary font-label text-sm font-medium">Ver todo</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group relative overflow-hidden rounded-lg">
+<img alt="Laboratorio" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Scientific researcher in a clean modern laboratory examining marine specimens with blue lighting and advanced equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPqzsJbLWrzbW7IB-W_6j2RsPD63FCKCCSmlmQDCMDAMuipCQvXNm_b0MY24jr3HHRvh0Tv4SOBHFcjesfFZzprKLrcP3STuYgoLf-bPQIB-ZPGI9mP5JPuwI2jdEf0Du8JEWPdZt3pPJ39MqpOEumRxIibaRbpXj6SwxhX_IptgGt9p5977PByKNOngvx7EemgkRHK8pNbIvqhBFqc2kqCQiSUx8wqUL2caneI6qcl-qGfXVENYaoeCSCJ1K8kCtx5A7K5m7aS8kP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<p class="text-white font-medium">Control de temperatura en incubadoras</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<img alt="Microscopio" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up view through a high-tech microscope lens showing cellular structures of a shark egg in warm amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl-3jHbHfDVRdgKHzTR5OqINbtysqCahprja_Pthx-ty-3j0Ko51zW5vCbND4wame0GR3yhebM41UGZTVkepHt1ZBhpEvFWo2OzqLd2XOCFqJlP9FraSo5zmBKUYFQRhfaEpO3B64U6a-n1cFETD3LAfQNRd7B2eeUHeFJPw5owqg2q5YqREgh96ih1x7-WIzBVGjNXjpaCR4Slxzsm8JfRy6WWCPyP-eodsU_sfw4mURuFJzZcWPw73GBaY4VTwXJD8HXvRLoXIgV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<p class="text-white font-medium">Análisis morfológico semanal</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg md:col-span-2">
+<img alt="Equipo" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A diverse team of marine biologists working together around a large saltwater tank containing small sharks in a bright professional facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt8UvL0-8P49ML5fTzk8efuC_vFU-vjsEJFwHM7x0yUE7SeXRqfczmwdYrk3TmStKduRk4TftKVzzrpp9v2uOzvTAIUmm_wJ6qsGEDTguLxwURxAWCoHC3MKns6G8udCuHmpRi9l619Et1nGeoyCeD0gmkaoWTpBZWtC-HLDZ669_yzAkeY93tq9Rp0-E3v0picrB3GaUtqVj2YBqh-bNnP8qkxCZjKPxD3GrAOgIGIU_d7L7hstyGqyTVFtoV4-GI5UzNUDZry9IF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+<div class="text-white">
+<p class="text-lg font-headline">El equipo en acción</p>
+<p class="text-sm opacity-80">Colaboración entre universidades para la repoblación del Mediterráneo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-orange-50/90 dark:bg-slate-950/90 backdrop-blur-md fixed bottom-0 w-full z-50 rounded-t-[32px] border-t border-teal-100 dark:border-slate-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 active:scale-95 transition-transform duration-150 hover:text-teal-700 dark:hover:text-teal-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Home</span>
+</a>
+<!-- Explorar -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 active:scale-95 transition-transform duration-150 hover:text-teal-700 dark:hover:text-teal-300" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Explorar</span>
+</a>
+<!-- Animales (Active) -->
+<a class="flex flex-col items-center justify-center bg-teal-100 dark:bg-teal-900/40 text-teal-900 dark:text-teal-100 rounded-full px-5 py-1.5 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Animales</span>
+</a>
+<!-- Perfil -->
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-1.5 active:scale-95 transition-transform duration-150 hover:text-teal-700 dark:hover:text-teal-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Perfil</span>
+</a>
+</nav>
+</body></html>

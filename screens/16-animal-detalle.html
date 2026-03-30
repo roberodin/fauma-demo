@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Animal Detalle - Fauma</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb4ac",
+              "surface-variant": "#e8e1dc",
+              "primary-fixed-dim": "#8bd2da",
+              "on-primary-fixed-variant": "#004f55",
+              "on-primary-container": "#a1e9f1",
+              "surface": "#fff8f2",
+              "secondary-fixed": "#d7e3f9",
+              "secondary": "#535f71",
+              "error": "#ba1a1a",
+              "primary-container": "#1a6b72",
+              "surface-bright": "#fff8f2",
+              "secondary-container": "#d7e3f9",
+              "on-background": "#1e1b18",
+              "primary": "#005258",
+              "surface-container-highest": "#e8e1dc",
+              "surface-dim": "#dfd9d3",
+              "inverse-surface": "#33302c",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#eee7e1",
+              "on-surface-variant": "#3f484a",
+              "on-secondary-fixed-variant": "#3c4859",
+              "primary-fixed": "#a6eff6",
+              "tertiary": "#822d28",
+              "on-tertiary-container": "#ffd3cf",
+              "on-primary-fixed": "#002022",
+              "inverse-primary": "#8bd2da",
+              "background": "#fff8f2",
+              "surface-container-low": "#f9f2ec",
+              "surface-tint": "#15686f",
+              "secondary-fixed-dim": "#bbc7dc",
+              "outline": "#6f797a",
+              "on-tertiary-fixed": "#410003",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "on-surface": "#1e1b18",
+              "tertiary-container": "#a1443d",
+              "surface-container": "#f3ede7",
+              "on-secondary-container": "#596577",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f6f0ea",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#ffdad6",
+              "outline-variant": "#bec8c9",
+              "on-secondary-fixed": "#101c2c",
+              "coral-brand": "#f4847a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .tracking-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 3s forwards ease-out;
+      }
+      @keyframes draw {
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top AppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FFF8F2]/80 dark:bg-stone-900/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#1A6B72] dark:text-[#26A69A] scale-95 active:duration-150 transition-opacity hover:opacity-80">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-serif text-2xl tracking-tight text-[#1E1B18] dark:text-[#EEE7E1]">Mi Animal Detalle</h1>
+</div>
+<div class="w-10"></div>
+</header>
+<main class="pb-32">
+<!-- Hero Header -->
+<section class="relative h-[574px] w-full overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Majestic Loggerhead sea turtle swimming through clear turquoise ocean water with dappled sunlight reflecting on its patterned shell" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxRbG-AW-ndG-n_2ovUHpzaM1Ww-QStNX18kdtFbCCtoaTB-ANzFeQ2cQOp0b4q6EIXhR7eg3qX9Xe2FwdbpLDp5Zdza2UyrH8RI_-J-jfwv9FH0I4r8kamZEpiGMyIOLgMn4RssqVvebOYJKFSpP--BHtwVc2Mb_ejuV0o6Xo_LdXp2uX3_njWMPYLCll9cSqq2UZOllkn_ANeOpKv3UkWb_XfSsh01fvZkZ_6BC4RKzoDZUBOpI9PRZUFLseZM4B1AIG7q3I2bEM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 space-y-4">
+<div class="inline-flex items-center px-4 py-1.5 bg-primary-container text-[#FFF8F2] rounded-full text-xs font-semibold tracking-wider uppercase">
+                Nivel: Hermano
+            </div>
+<h2 class="font-headline text-5xl text-white leading-tight">Tortuga Caretta caretta</h2>
+<p class="text-white/80 font-body text-lg max-w-xs">Somos 847 personas protegiendo esta especie</p>
+</div>
+</section>
+<!-- Content Tabs -->
+<nav class="sticky top-[68px] z-40 bg-surface py-6 px-6 overflow-x-auto no-scrollbar flex gap-3">
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-primary-container text-surface font-headline italic text-lg shadow-sm">
+            Ficha Técnica
+        </button>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-body font-medium transition-colors hover:bg-surface-container-highest">
+            Galería
+        </button>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-body font-medium transition-colors hover:bg-surface-container-highest">
+            Curiosidades
+        </button>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-body font-medium transition-colors hover:bg-surface-container-highest">
+            Diario de Salud
+        </button>
+</nav>
+<!-- Active Tab Content -->
+<div class="px-6 space-y-10">
+<!-- Seasonal Content Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low border-l-[6px] border-coral-brand p-6 shadow-sm">
+<span class="block text-[10px] font-bold tracking-widest uppercase text-tertiary mb-1">Contenido estacional</span>
+<p class="font-headline text-xl text-on-surface leading-snug">
+<span class="text-2xl">🥚</span> Ciclo de Vida — Marzo: <span class="italic">Temporada de anidación.</span> Las hembras buscan playas para anidar.
+            </p>
+</div>
+<!-- Tracking Map Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-2xl text-on-surface">Ruta Migratoria Directa</h3>
+<div class="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    En vivo
+                </div>
+</div>
+<div class="relative h-[240px] rounded-2xl overflow-hidden shadow-inner border border-outline/10 bg-[#2b2b2b]">
+<!-- Simulated Satellite Imagery Background -->
+<div class="absolute inset-0 opacity-60 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZPtsGcs5-OwlDC77vw6PZiyPu4cQv5g6mAUjr_cHwztJ-V1fd0m0A8JLZFGvBY7tJB9N6gH7PvpMFMNsytPrA3mERWIxiT9g7WB8SOHXFz950H2KoI2MifENYZpSivJUDSEHtAdlpNMM9P6jrW9PaS56L0h1bPUjTgp-v9KzS0Qtemjd9erD95mDQHXLDra8EPYkZ_2gbqcOnqVFa0wMpBw8ArWdpoKNPaU-I3l6hrkwyeojSNzbzhWF2iJXeYNfTOdJJiNHBzWt0');"></div>
+<!-- Path and Marker Layer -->
+<svg class="absolute inset-0 w-full h-full" fill="none" viewbox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+<path class="tracking-path" d="M50,180 C100,160 150,210 200,140 S300,80 340,110" stroke="#f4847a" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="340" cy="110" fill="#f4847a" r="6">
+<animate attributename="r" dur="2s" repeatcount="indefinite" values="6;9;6"></animate>
+<animate attributename="opacity" dur="2s" repeatcount="indefinite" values="1;0.4;1"></animate>
+</circle>
+<circle cx="340" cy="110" fill="white" r="3"></circle>
+</svg>
+<!-- Interface Overlays -->
+<div class="absolute top-4 left-4 p-3 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 text-white space-y-1">
+<p class="text-[9px] font-bold uppercase tracking-widest text-coral-brand">Ubicación Actual</p>
+<p class="text-xs font-mono">24.5502° N, 81.7800° W</p>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="w-10 h-10 rounded-full bg-white/90 text-primary shadow-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">my_location</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/90 text-primary shadow-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">layers</span>
+</button>
+</div>
+</div>
+<p class="text-sm font-body text-on-surface-variant italic">Seguimiento por satélite de la hembra 'Nerea' cruzando el estrecho.</p>
+</section>
+<!-- Scientific Plate: Interactive Hotspots -->
+<section class="space-y-6">
+<div class="relative group aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low p-4">
+<img class="w-full h-full object-contain mix-blend-multiply opacity-90" data-alt="Close up studio portrait of a sea turtle on a neutral warm beige background highlighting detailed textures of skin and shell" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQC3ir58CVd_oJp5LxlDBsfETsncC-bG_SE2piWoOk7DNr2o_xHHXpDEWsZEzvDLqQ1DAY_XRd71o3jAuHcsd6uytyvf-ODQDaE0a3IG23Qw8OC7VbUNBhMKcwxUFlP3KC4TnXyHuGjGs5g4_kxas3zjb7DR_r14qsbqFb-3WwdZc2JSa-pC1SrKiqmlYNRxeFWg3SY9j39wG2N1eR1nkeyXB8F1gly9M6JOzkIzOYOEPflr4-qR_LmRa8r6fh6UxEBTBv_oK4LPeQ"/>
+<!-- Hotspots -->
+<button class="absolute top-1/4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary-container/90 text-white flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<button class="absolute top-[45%] left-1/3 w-8 h-8 rounded-full bg-primary-container/90 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<button class="absolute bottom-1/3 right-1/4 w-8 h-8 rounded-full bg-primary-container/90 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<button class="absolute bottom-1/4 left-1/4 w-8 h-8 rounded-full bg-primary-container/90 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-white/40 backdrop-blur-md border border-white/20">
+<p class="text-[10px] font-bold uppercase tracking-tighter text-primary">Anatomía Interactiva</p>
+<p class="text-sm font-body italic text-on-surface">Pulsa en los marcadores para descubrir datos biométricos.</p>
+</div>
+</div>
+</section>
+<!-- Accordion Sections -->
+<section class="space-y-4">
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<span class="font-headline text-lg text-on-surface">📋 Identificación y Taxonomía</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">expand_more</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<span class="font-headline text-lg text-on-surface">📏 Biometría y Morfología</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">expand_more</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<span class="font-headline text-lg text-on-surface">🌍 Ecología y Distribución</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">expand_more</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<span class="font-headline text-lg text-on-surface">🧬 Biología Reproductiva</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">expand_more</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex items-center justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<span class="font-headline text-lg text-on-surface">⚠️ Amenazas y Desafíos</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-1 transition-transform">expand_more</span>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-md bg-[#FFF8F2]/90 backdrop-blur-xl rounded-full shadow-2xl border border-white/20 z-50">
+<div class="flex items-center justify-around h-20 px-4">
+<a class="flex flex-col items-center gap-1 text-secondary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Explorar</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary transition-colors" href="#">
+<div class="flex h-10 w-10 items-center justify-center bg-primary-fixed rounded-full text-on-primary-fixed-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Animales</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Perfil</p>
+</a>
+</div>
+</nav>
+</body></html>

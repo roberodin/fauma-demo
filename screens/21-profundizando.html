@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profundizando - Proyecto Pintarroja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#d7e3f9",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#8bd2da",
+              "on-tertiary-fixed": "#410003",
+              "surface-dim": "#dfd9d3",
+              "on-primary-fixed-variant": "#004f55",
+              "surface-container-low": "#f9f2ec",
+              "primary-fixed": "#a6eff6",
+              "on-surface-variant": "#3f484a",
+              "on-secondary-fixed-variant": "#3c4859",
+              "tertiary-fixed-dim": "#ffb4ac",
+              "on-secondary-fixed": "#101c2c",
+              "surface-variant": "#e8e1dc",
+              "primary": "#005258",
+              "outline-variant": "#bec8c9",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "on-primary-container": "#a1e9f1",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e8e1dc",
+              "background": "#fff8f2",
+              "on-secondary-container": "#596577",
+              "tertiary-container": "#a1443d",
+              "surface-container": "#f3ede7",
+              "surface": "#fff8f2",
+              "on-surface": "#1e1b18",
+              "tertiary": "#822d28",
+              "primary-container": "#1a6b72",
+              "surface-bright": "#fff8f2",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#33302c",
+              "surface-tint": "#15686f",
+              "inverse-primary": "#8bd2da",
+              "inverse-on-surface": "#f6f0ea",
+              "secondary-fixed": "#d7e3f9",
+              "secondary": "#535f71",
+              "on-background": "#1e1b18",
+              "tertiary-fixed": "#ffdad6",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#bbc7dc",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "outline": "#6f797a",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002022",
+              "on-tertiary-container": "#ffd3cf",
+              "surface-container-high": "#eee7e1"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 1;
+            padding-right: 0.75rem;
+            font-family: 'Newsreader', serif;
+            font-weight: 700;
+            color: #005258;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-orange-50 flex items-center justify-between px-4 h-16 w-full shadow-sm border-b border-teal-100">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-teal-50 rounded-full transition-colors duration-200 text-teal-800">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold font-serif text-teal-800">Profundizando</h1>
+</div>
+<button class="p-2 hover:bg-teal-50 rounded-full transition-colors duration-200 text-teal-800">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="pt-20 px-4 max-w-4xl mx-auto space-y-12">
+<!-- Editorial Section -->
+<section class="space-y-6">
+<div class="aspect-[16/9] w-full rounded-lg overflow-hidden shadow-lg">
+<img alt="Close-up of a Pintarroja shark in deep blue water" class="w-full h-full object-cover" data-alt="close-up of a small spotted catshark swimming in clear blue water with cinematic lighting and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjFDEkXkfNsrpT5HsFc0VswBbDfs4uH4zbwzFOdm7dUf6NJ75mub5_dkMwb0VBHmvBBOefiQ1eet5c8rRlWnBSNnFgKPhU78xxyj7KmGy3NfK9YsWaEhdkLwta1DV2VIEfgRnCXuPuhbikmSFFIT4MCg1iEh0N7xbuG4QKJsm3nkGhX2UqbO1A1MVFZOtVU1IqJ33Z6C1Ura6v0W7diZznv450cvOuSts9Qsh8M4ADXFBm0H6DvM54nHqgBYEREHNS4_1XgtGYn-n2"/>
+</div>
+<article class="prose prose-teal max-w-none">
+<p class="drop-cap text-lg leading-relaxed text-on-surface-variant font-body">
+                    El estudio del Scyliorhinus canicula, comúnmente conocido como pintarroja, representa un pilar fundamental en la comprensión de los ecosistemas marinos del Mediterráneo. Este pequeño escualo, caracterizado por su piel moteada y su resistencia, es el protagonista de nuestra investigación actual en las costas levantinas.
+                </p>
+<p class="text-on-surface-variant leading-relaxed font-body mt-4">
+                    Nuestra metodología combina el marcaje tradicional con análisis genéticos de vanguardia para trazar las rutas migratorias y los patrones de cría de esta especie vital para el equilibrio oceánico.
+                </p>
+</article>
+</section>
+<!-- Map Section -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 px-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h2 class="font-headline text-2xl font-bold text-primary">Ubicación del Proyecto</h2>
+</div>
+<div class="relative bg-surface-container-high rounded-lg overflow-hidden shadow-md h-64 group">
+<img alt="Map showing Valencia Aquarium location" class="w-full h-full object-cover" data-alt="stylized architectural plan and map overlay of a modern marine research center at the edge of a coastal city" data-location="Acuario Valencia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4SSPRSKwyEJHhYsXOjQiKqEuVRa0_4O3bslV5UIBdlTB7QWNkvE44kYAJrjP_SZhDHe9-90HVBPPgbPSh-omAYp0IdcPfq8RnNtweYbqBrDOP3MCIMZ99KPNNRMp5v1nNJBQiTZ-z7rNJEcQzvnO7DPCjqQIfdKhbJ2f9UkLrf-Mf3_MbDFoTytYE2hroRaZMVP6bFzew_gIOtcTlmSI7nEzeoBavJbfEWFQzMc43TdM6dzWTHAIm-91hAh9r8nutxwgD0WEdVLUa"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-xl border border-teal-100 flex items-center gap-3">
+<div class="bg-primary text-on-primary p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="apartment">apartment</span>
+</div>
+<div>
+<p class="font-bold text-primary">Acuario Valencia</p>
+<p class="text-xs text-secondary italic">Centro de Investigación Marina</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Grid -->
+<section class="space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="font-headline text-2xl font-bold text-primary">Material y equipamiento</h2>
+<span class="text-sm font-label text-secondary">4 Elementos</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Microscope -->
+<div class="group relative bg-white rounded-lg p-2 shadow-sm border border-surface-variant hover:shadow-md transition-all duration-300">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Microscope" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="high-end laboratory microscope with glowing blue led lights in a clean sterile scientific environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0sIPR4E8nIwDZoY-6_XJWsmBZoELHz6amuac6H-VNuP68KUggUen3sCaF0EqNIng53jOE_V5hPDEN9oWeqvDNVJQWyj91xnAEVqk7m1pdQU5FWTgG2O-D3MdkaB3iUg8FMUKSAK3Ip6n8NfMiM3ZqoAXfLHdc4B70OJxxTrbh0neHDY5-HRYsZAbKEFlkGNMuY_-zC0CX0uRGjMSlKws1QARXk6iJPHrZsdIqTu1lccyWG6tv50xsSoA6i5Rj_1sFZDrhQeCCJCXn"/>
+</div>
+<p class="font-label text-sm font-semibold text-center text-primary">Microscopio</p>
+</div>
+<!-- Incubator -->
+<div class="group relative bg-white rounded-lg p-2 shadow-sm border border-surface-variant hover:shadow-md transition-all duration-300">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Incubators" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="advanced scientific incubator chamber with digital displays and glowing interior lights for marine specimen growth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsMPYjYgydSkMgTwm4BCUWJPMcUSmxASWmHor9u5LWYuX0eSLiWjoE_Wg5tZaeWz7O-B59pdDaUg_7GAvKgMneHwozEbqaVxp7SRMIFFCYQRvUX0v9qSQvD9YGiVjQ3l7DiORZNVKtqUytWVdvjrATU5VfAf7BdpVnCXjDJyTyLETNaNaoDWR3VVeMAG7Oc41CwZNQwEHhjh6tqf5GRpdl-elG-YgLzBhQTNaMg-zaqCyLWJSe3AGjpK7WYqCwgj7tllIzFGeI0bLq"/>
+</div>
+<p class="font-label text-sm font-semibold text-center text-primary">Incubadoras</p>
+</div>
+<!-- Cameras -->
+<div class="group relative bg-white rounded-lg p-2 shadow-sm border border-surface-variant hover:shadow-md transition-all duration-300">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Professional Cameras" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="underwater professional camera gear with housing and lighting rigs on a wooden research vessel deck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_EfYSg0TYvL652h6Et1l6lb0OQ8XnnPqHWjVcF28OI6yq5FY4iXkGPhj1Pl8KRbDMREaNqiZf5ZXYcSdWksC5fN4G8chBk-9S1KddRpe1PHzqunxEAm8dMaFeSA-_GgG2NVxz1iEtn6z-UeHsP-F7bcVOj9G7y_h-9w-mvpZ3W_uPRpnlGmN4MCtHXHSgvi9rH4ynH__nwjFSiPVj3WnuRUWwQVbj_6RQjIaY6GcTY1xqaUHA33SqunFof7fpxKYc0jaUkQkUg3E0"/>
+</div>
+<p class="font-label text-sm font-semibold text-center text-primary">Cámaras</p>
+</div>
+<!-- Genetic Kit -->
+<div class="group relative bg-white rounded-lg p-2 shadow-sm border border-surface-variant hover:shadow-md transition-all duration-300">
+<div class="aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Genetic Kit" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="organized DNA extraction kit with pipettes and colorful test tubes in a molecular biology station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0zsqQdApN9NE22PBoAybHsOYntVfZfbSn_HeEdEpqqquvIisDsKv8jni0gw51mdprYN7phkXJE4syPUkskOtWdJXy-I9AuocXr_Ug4JB_v-4heA2zJvhQHEL-0qNjhgw7ZL1Jqv-y0sXT8byuWxI_LC5Xw6RrarOpNYJ3Kn7NMXLsHyyNevJ_cBC097bLGFk9i9Op1KviQQbDVcaMn7TNSofeaLPs6H5o2tJLxGjajvs9WQVVGqEVFavaPu0jbbIb4JXyANFzWtXj"/>
+</div>
+<p class="font-label text-sm font-semibold text-center text-primary">Kit Genético</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-orange-50/90 backdrop-blur-md z-50 rounded-t-[32px] border-t border-teal-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Explorar</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-teal-100 text-teal-900 rounded-full px-5 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Animales</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 px-5 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-sans text-[12px] font-medium tracking-wide">Perfil</span>
+</button>
+</nav>
+</body></html>

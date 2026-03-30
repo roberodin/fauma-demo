@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fauma — Demo Navegable</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #1a1a1e;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* --- Sidebar --- */
+  .sidebar {
+    width: 280px;
+    background: #222228;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  .sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .sidebar-header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A6B72;
+    letter-spacing: 2px;
+  }
+
+  .sidebar-header p {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+  }
+
+  .flow-group {
+    padding: 8px 0;
+    border-bottom: 1px solid #2a2a30;
+  }
+
+  .flow-group-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #F4847A;
+    padding: 8px 16px 4px;
+  }
+
+  .screen-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: #ccc;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+
+  .screen-btn:hover { background: #2a2a32; color: #fff; }
+  .screen-btn.active { background: #1A6B72; color: #fff; font-weight: 600; }
+
+  .screen-btn .num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .screen-btn.active .num { background: #005258; }
+
+  /* --- Main area --- */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111114;
+    overflow: hidden;
+  }
+
+  /* Toolbar */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    background: #1a1a1e;
+    width: 100%;
+    border-bottom: 1px solid #333;
+  }
+
+  .toolbar button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #444;
+    background: #222;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+
+  .toolbar button:hover { background: #1A6B72; border-color: #1A6B72; color: #fff; }
+  .toolbar button:disabled { opacity: 0.3; cursor: default; background: #222; border-color: #333; }
+
+  .toolbar .screen-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    min-width: 260px;
+    text-align: center;
+  }
+
+  .toolbar .counter {
+    font-size: 11px;
+    color: #888;
+  }
+
+  /* Phone frame */
+  .phone-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .phone-frame {
+    width: 390px;
+    height: 844px;
+    border-radius: 44px;
+    border: 4px solid #333;
+    background: #000;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(0,0,0,0.5), 0 0 0 1px #222;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  /* Notch */
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 34px;
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    z-index: 10;
+  }
+
+  .phone-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #FFF8F2;
+  }
+
+  /* Transition overlay */
+  .transition-overlay {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+    border-radius: 40px;
+    z-index: 5;
+  }
+
+  .transitioning .transition-overlay {
+    opacity: 1;
+  }
+
+  /* Flow indicator dots */
+  .flow-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .flow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .flow-dot.active { background: #1A6B72; transform: scale(1.3); }
+  .flow-dot.visited { background: #F4847A; }
+
+  /* Keyboard shortcuts hint */
+  .shortcuts {
+    padding: 12px 16px;
+    font-size: 10px;
+    color: #555;
+    border-top: 1px solid #2a2a30;
+  }
+
+  .shortcuts kbd {
+    background: #333;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h1>FAUMA</h1>
+    <p>Prototipo navegable &middot; 25 pantallas</p>
+  </div>
+
+  <div id="screen-list"></div>
+
+  <div class="shortcuts">
+    <kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navegar &middot; <kbd>1</kbd>-<kbd>9</kbd> Flujo
+  </div>
+</div>
+
+<div class="main">
+  <div class="toolbar">
+    <button id="btn-prev" onclick="navigate(-1)">&larr;</button>
+    <div>
+      <div class="screen-title" id="screen-title">Welcome</div>
+      <div class="counter" id="screen-counter">1 / 25</div>
+    </div>
+    <button id="btn-next" onclick="navigate(1)">&rarr;</button>
+  </div>
+
+  <div class="phone-wrapper">
+    <div class="phone-frame" id="phone-frame">
+      <div class="transition-overlay"></div>
+      <iframe id="screen-frame" src="screens/01-welcome.html"></iframe>
+    </div>
+  </div>
+
+  <div class="flow-dots" id="flow-dots"></div>
+</div>
+
+<script>
+const screens = [
+  // Onboarding & Acceso
+  { file: '01-welcome.html',         title: 'Welcome',                        flow: 'Onboarding' },
+  { file: '02-onboarding1.html',     title: 'Elige tu especie',               flow: 'Onboarding' },
+  { file: '03-onboarding2.html',     title: 'Apoya con tu suscripcion',       flow: 'Onboarding' },
+  { file: '04-onboarding3.html',     title: 'Descubre contenido exclusivo',   flow: 'Onboarding' },
+  { file: '05-login.html',           title: 'Login / Registro',               flow: 'Onboarding' },
+
+  // Explorar
+  { file: '06-explorar.html',        title: 'Explorar',                       flow: 'Explorar' },
+  { file: '07-ficha-especie.html',   title: 'Ficha Especie - Caretta',        flow: 'Explorar' },
+  { file: '08-ficha-proyecto.html',  title: 'Ficha Proyecto - Pintarroja',    flow: 'Explorar' },
+
+  // Conversion
+  { file: '09-nivel-merch.html',     title: 'Nivel + Merchandising',          flow: 'Conversion' },
+  { file: '10-direccion-envio.html', title: 'Direccion de Envio',             flow: 'Conversion' },
+  { file: '11-regalo.html',          title: 'Configurar Regalo',              flow: 'Conversion' },
+  { file: '12-confirmar-pago.html',  title: 'Confirmar Pago',                flow: 'Conversion' },
+  { file: '13-exito.html',           title: 'Exito de Suscripcion',          flow: 'Conversion' },
+
+  // Home
+  { file: '14-home.html',            title: 'Home - Dashboard',               flow: 'Home' },
+
+  // Mi Animal (Especie)
+  { file: '15-mis-animales.html',    title: 'Mis Animales - Lista',           flow: 'Mi Animal' },
+  { file: '16-animal-detalle.html',  title: 'Mi Animal - Detalle',            flow: 'Mi Animal' },
+  { file: '17-animal-galeria.html',  title: 'Mi Animal - Galeria',            flow: 'Mi Animal' },
+  { file: '18-curiosidades.html',    title: 'Curiosidades',                   flow: 'Mi Animal' },
+  { file: '19-diario-salud.html',    title: 'Diario de Salud',                flow: 'Mi Animal' },
+
+  // Mi Proyecto
+  { file: '20-proyecto-ficha.html',  title: 'Mi Proyecto - Ficha',            flow: 'Mi Proyecto' },
+  { file: '21-profundizando.html',   title: 'Mi Proyecto - Profundizando',    flow: 'Mi Proyecto' },
+  { file: '22-equipo.html',          title: 'Mi Proyecto - Equipo',           flow: 'Mi Proyecto' },
+  { file: '23-resultados.html',      title: 'Mi Proyecto - Resultados',       flow: 'Mi Proyecto' },
+  { file: '24-galeria-proyecto.html',title: 'Mi Proyecto - Galeria',          flow: 'Mi Proyecto' },
+
+  // Perfil
+  { file: '25-perfil.html',          title: 'Perfil',                         flow: 'Perfil' },
+];
+
+let currentIndex = 0;
+const visited = new Set([0]);
+
+// Build sidebar
+function buildSidebar() {
+  const list = document.getElementById('screen-list');
+  let currentFlow = '';
+  screens.forEach((s, i) => {
+    if (s.flow !== currentFlow) {
+      currentFlow = s.flow;
+      const group = document.createElement('div');
+      group.className = 'flow-group';
+      group.innerHTML = `<div class="flow-group-title">${currentFlow}</div>`;
+      list.appendChild(group);
+    }
+    const btn = document.createElement('button');
+    btn.className = 'screen-btn';
+    btn.dataset.index = i;
+    btn.innerHTML = `<span class="num">${i + 1}</span>${s.title}`;
+    btn.onclick = () => goTo(i);
+    list.lastChild.appendChild(btn);
+  });
+}
+
+// Build flow dots
+function buildDots() {
+  const dots = document.getElementById('flow-dots');
+  dots.innerHTML = '';
+  screens.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'flow-dot';
+    dot.onclick = () => goTo(i);
+    dots.appendChild(dot);
+  });
+}
+
+function updateUI() {
+  // Title
+  document.getElementById('screen-title').textContent = screens[currentIndex].title;
+  document.getElementById('screen-counter').textContent = `${currentIndex + 1} / ${screens.length}`;
+
+  // Buttons
+  document.getElementById('btn-prev').disabled = currentIndex === 0;
+  document.getElementById('btn-next').disabled = currentIndex === screens.length - 1;
+
+  // Sidebar active state
+  document.querySelectorAll('.screen-btn').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.index) === currentIndex);
+  });
+
+  // Scroll sidebar to active
+  const activeBtn = document.querySelector('.screen-btn.active');
+  if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  // Flow dots
+  const dots = document.querySelectorAll('.flow-dot');
+  dots.forEach((dot, i) => {
+    dot.className = 'flow-dot';
+    if (i === currentIndex) dot.classList.add('active');
+    else if (visited.has(i)) dot.classList.add('visited');
+  });
+}
+
+function goTo(index) {
+  if (index < 0 || index >= screens.length || index === currentIndex) return;
+
+  const frame = document.getElementById('phone-frame');
+  frame.classList.add('transitioning');
+
+  setTimeout(() => {
+    currentIndex = index;
+    visited.add(index);
+    document.getElementById('screen-frame').src = 'screens/' + screens[index].file;
+    updateUI();
+
+    setTimeout(() => frame.classList.remove('transitioning'), 100);
+  }, 150);
+}
+
+function navigate(delta) {
+  goTo(currentIndex + delta);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') navigate(-1);
+  else if (e.key === 'ArrowRight') navigate(1);
+  else if (e.key === 'Home') goTo(0);
+  else if (e.key === 'End') goTo(screens.length - 1);
+});
+
+buildSidebar();
+buildDots();
+updateUI();
+</script>
+</body>
+</html>

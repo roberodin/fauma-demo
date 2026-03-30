@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fauma — Desarrollo de huevos de Pintarroja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;0,6..72,800;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#6f797a",
+              "on-background": "#1e1b18",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "background": "#fff8f2",
+              "inverse-primary": "#8bd2da",
+              "surface-container-highest": "#e8e1dc",
+              "on-surface-variant": "#3f484a",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#eee7e1",
+              "on-surface": "#1e1b18",
+              "surface-tint": "#15686f",
+              "on-tertiary-container": "#ffd3cf",
+              "on-secondary-container": "#596577",
+              "on-tertiary-fixed-variant": "#7e2a25",
+              "on-primary-container": "#a1e9f1",
+              "tertiary-container": "#a1443d",
+              "tertiary-fixed-dim": "#ffb4ac",
+              "tertiary": "#822d28",
+              "on-primary-fixed-variant": "#004f55",
+              "outline-variant": "#bec8c9",
+              "secondary": "#535f71",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#dfd9d3",
+              "secondary-fixed-dim": "#bbc7dc",
+              "surface-bright": "#fff8f2",
+              "primary": "#005258",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#002022",
+              "surface-variant": "#e8e1dc",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#ffdad6",
+              "on-secondary-fixed": "#101c2c",
+              "surface-container-low": "#f9f2ec",
+              "on-secondary-fixed-variant": "#3c4859",
+              "surface-container": "#f3ede7",
+              "surface": "#fff8f2",
+              "inverse-surface": "#33302c",
+              "inverse-on-surface": "#f6f0ea",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#d7e3f9",
+              "primary-fixed": "#a6eff6",
+              "on-tertiary-fixed": "#410003",
+              "primary-container": "#1a6b72",
+              "on-error": "#ffffff",
+              "secondary-container": "#d7e3f9",
+              "primary-fixed-dim": "#8bd2da"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 248, 242, 0.7);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(26, 107, 114, 0.1);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFF8F2;
+      }
+      h1, h2, h3 {
+        font-family: 'Newsreader', serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-surface mb-24">
+<!-- Top App Bar -->
+<nav class="w-full top-0 sticky bg-[#FFF8F2] dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-50">
+<div class="flex justify-between items-center px-4 h-16 w-full max-w-7xl mx-auto">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined text-[#1A6B72] dark:text-[#26a6b5]">arrow_back</span>
+</button>
+<h1 class="font-serif font-bold text-lg text-[#1A6B72]">Detalle del Proyecto</h1>
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined text-[#1A6B72] dark:text-[#26a6b5]">share</span>
+</button>
+</div>
+</nav>
+<main class="max-w-4xl mx-auto">
+<!-- Hero Section -->
+<section class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-[#1A6B72]/90 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Modern marine laboratory with blue lighting and scientific equipment focusing on small shark egg capsules in a glass tank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJU9Aai_eQ2KCBOQS1behOBVmfz-k19nZbV6uFCjeaftapMEpHkY-ooyAXaDIRYuhfzIPVSyuANm-Bi0fYQBk287Njk1SatqMIkbYbPU2YdaYyJ8C0I1vKdu1spEvjwXm6kNldeX21P2MlYtrYhF0ODSLcjMaRb9NVlI39AGDP3jciUG9QbZjyKCyg_M0nHQ6dIVEchM_Pnhorzf8WLlRv8OuJS5t7EV-H1GFCtUOpDXKnC26VaTs9U9fqKK_l2kjCP5KoqY6QgGHN"/>
+<div class="absolute bottom-6 left-6 right-6 z-20">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary-container text-on-primary-container text-xs px-3 py-1 rounded-full font-medium">Oceanogràfic</span>
+<span class="bg-tertiary text-on-tertiary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Amigo</span>
+</div>
+<h2 class="text-3xl font-bold text-white leading-tight">Desarrollo de huevos de Pintarroja</h2>
+</div>
+</section>
+<!-- Tabs Navigation -->
+<div class="flex items-center justify-between px-6 py-4 bg-surface border-b border-surface-container-highest overflow-x-auto whitespace-nowrap scrollbar-hide">
+<button class="text-secondary font-medium px-4 py-2 hover:text-primary transition-colors">Timeline</button>
+<button class="text-primary font-bold px-4 py-2 border-b-2 border-primary relative">
+                Ficha Técnica
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+</button>
+<button class="text-secondary font-medium px-4 py-2 hover:text-primary transition-colors">Galería</button>
+<button class="text-secondary font-medium px-4 py-2 hover:text-primary transition-colors">Equipo</button>
+</div>
+<div class="p-6 space-y-8">
+<!-- Taxonomy Title Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h3 class="text-4xl font-extrabold text-primary mb-1">Pintarroja</h3>
+<p class="text-secondary font-medium italic text-xl">Scyliorhinus canicula</p>
+</div>
+<div class="w-32 h-32 flex items-center justify-center bg-white rounded-xl shadow-sm border border-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Detailed vintage-style scientific illustration of a small-spotted catshark showing characteristic spotted skin pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2mCAxtCxKY7AiZ7HbJzfNEYsGrFT-Jotx5G2cwKFJWp3zurrxs0Nbzia3RAHZ59nVuaarICgM7HadfdfzDBc5_pUj_WZgQ6C7xcqd4TbqhFkk-fLKibErxl_YWqRz2mMVTj0GgGPXo2VxS55Q4WMtyD5Kzc3UUvq_hTNnpGeEFU9TtvGxiSGj-uVP65H4h3qlTFXZlbHAwKWU3bUWNhGNhP6XftbA5mDDaQZqSrqmunlt9wRNpX99oaKgqWkn7MGnaPC7drl6FbUj"/>
+</div>
+</div>
+<!-- Infographic Card 1: Anatomía -->
+<section class="bg-white rounded-lg p-6 shadow-sm border border-surface-container">
+<h4 class="text-primary font-bold text-lg mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>
+                    Morfología y Adaptación
+                </h4>
+<div class="relative group cursor-crosshair">
+<img class="w-full rounded-lg" data-alt="Side profile of a catshark swimming in clear blue water, emphasizing its streamlined body and spotted dorsal fins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgv2FlmiqvEjxHdp8Zuc6Oq5Z_nnp5WcWCwfhnkB6D35EtUYH1tU2qAG8WkppYPo0F-6nB1VsOa6n2Y7VVEdnRZxQCa51e1F9zxj16XBjvV2VJX3GgVU2nsAcs4LjF-DGDjKL842tIpGCoalEKwIyPwa4d4uzYyr9vY07UYMFEXSwmAPSUreaHWImsxSxDuwNLLdrYpByG_CEuZjvFekjrQv4tDhUeGQ_HxUrdu5Lul2hbV634pr2T98-wEShEPo8HYgmQH-jhw78Y"/>
+<!-- Hotspots -->
+<div class="absolute top-[20%] left-[65%] w-4 h-4 bg-tertiary rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+<div class="absolute top-[40%] left-[40%] w-4 h-4 bg-tertiary rounded-full border-2 border-white shadow-lg"></div>
+<div class="absolute top-[15%] left-[10%] w-4 h-4 bg-tertiary rounded-full border-2 border-white shadow-lg"></div>
+<div class="absolute top-[70%] left-[30%] w-4 h-4 bg-tertiary rounded-full border-2 border-white shadow-lg"></div>
+</div>
+<div class="grid grid-cols-2 gap-3 mt-6">
+<div class="flex items-start gap-2 p-3 bg-surface rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<p class="text-sm font-medium"><span class="text-primary">Aletas dorsales:</span> Situadas hacia la parte posterior del cuerpo.</p>
+</div>
+<div class="flex items-start gap-2 p-3 bg-surface rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<p class="text-sm font-medium"><span class="text-primary">Piel:</span> Dentículos dérmicos que ofrecen protección.</p>
+</div>
+<div class="flex items-start gap-2 p-3 bg-surface rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<p class="text-sm font-medium"><span class="text-primary">Ojos:</span> Adaptados a la visión en condiciones de penumbra.</p>
+</div>
+<div class="flex items-start gap-2 p-3 bg-surface rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<p class="text-sm font-medium"><span class="text-primary">Cápsulas:</span> "Monederos de sirena" para proteger el embrión.</p>
+</div>
+</div>
+</section>
+<!-- Data Grid 2x2 -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary/5 p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">straighten</span>
+<div>
+<p class="text-[10px] uppercase font-bold text-primary tracking-widest">Longitud</p>
+<p class="text-lg font-bold text-secondary">60-80 cm</p>
+</div>
+</div>
+<div class="bg-primary/5 p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+<div>
+<p class="text-[10px] uppercase font-bold text-primary tracking-widest">Peso</p>
+<p class="text-lg font-bold text-secondary">1-2 kg</p>
+</div>
+</div>
+<div class="bg-primary/5 p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">scuba_diving</span>
+<div>
+<p class="text-[10px] uppercase font-bold text-primary tracking-widest">Profundidad</p>
+<p class="text-lg font-bold text-secondary">10-400 m</p>
+</div>
+</div>
+<div class="bg-primary/5 p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">set_meal</span>
+<div>
+<p class="text-[10px] uppercase font-bold text-primary tracking-widest">Dieta</p>
+<p class="text-lg font-bold text-secondary">Crustáceos</p>
+</div>
+</div>
+</div>
+<!-- Infographic Card 2: Ciclo Reproductivo -->
+<!-- Infographic Card 3: Distribution Map -->
+<section class="bg-white rounded-lg p-6 shadow-sm border border-surface-container">
+<h4 class="text-primary font-bold text-lg mb-4">Área de Distribución</h4>
+<div class="aspect-video bg-secondary/10 rounded-lg relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="Satellite style map of the Mediterranean sea and Eastern Atlantic coast with highlighted teal regions" data-location="Mediterranean and Atlantic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYZvZS5WcUsOi24PLmWMMMdnuWTUfx7U73Tq2zVEbaJtmYHMRpM1pya6vzpMqVYRSH2wYLRmrSHrpXsL4gbyq9P_PmPxfe_lN1Qmhj6xSsyC_zBp7m21Ss_Bc6_5nuhWyw-MADnyKrVOvGPu0BNthobpQIJiMmiG6De6s2Vs-km3GEc0BiuyxUFzajCWGL1gMUSdpa9gMnfRt2Ub8QWeuYsd5Yfft917-gHSdwCt2PX_jwJockBtL6rl7w_P9xktWxcRc-P9fM1cc-"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-1/2 h-2/3 border-4 border-primary/40 bg-primary/20 rounded-full blur-xl"></div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded-full text-[10px] font-bold text-primary">
+                        Mediterráneo y Atlántico Oriental
+                    </div>
+</div>
+</section>
+<!-- Threats Section -->
+<section>
+<h4 class="text-secondary font-bold text-lg mb-4">Principales Amenazas</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="glass-card p-4 rounded-lg">
+<span class="material-symbols-outlined text-tertiary mb-2">spool</span>
+<h5 class="font-bold text-primary text-sm">Pesca incidental</h5>
+<p class="text-xs text-secondary mt-1">Capturadas frecuentemente en redes de arrastre.</p>
+</div>
+<div class="glass-card p-4 rounded-lg">
+<span class="material-symbols-outlined text-tertiary mb-2">thermostat</span>
+<h5 class="font-bold text-primary text-sm">Cambio climático</h5>
+<p class="text-xs text-secondary mt-1">El aumento de temperatura afecta el desarrollo embrionario.</p>
+</div>
+<div class="glass-card p-4 rounded-lg">
+<span class="material-symbols-outlined text-tertiary mb-2">factory</span>
+<h5 class="font-bold text-primary text-sm">Hábitat</h5>
+<p class="text-xs text-secondary mt-1">Destrucción de praderas de fanerógamas marinas.</p>
+</div>
+</div>
+</section>
+<!-- Conservation Status -->
+<section class="bg-green-50 border border-green-200 rounded-lg p-6 flex flex-col md:flex-row gap-6 items-center">
+<div class="flex-shrink-0 text-center">
+<div class="w-24 h-24 rounded-full border-8 border-green-500 flex items-center justify-center bg-white shadow-inner">
+<span class="text-2xl font-black text-green-600">LC</span>
+</div>
+<p class="text-[10px] font-bold text-green-700 mt-2 uppercase tracking-tighter">Estado IUCN</p>
+</div>
+<div>
+<h4 class="font-bold text-green-800 text-lg">Preocupación Menor (LC)</h4>
+<p class="text-sm text-green-700 leading-relaxed">
+                        Aunque su población global es estable, se observa una <span class="font-bold">tendencia decreciente</span> en el Mediterráneo debido a la presión pesquera. Este proyecto monitoriza su reproducción para asegurar la resiliencia de la especie.
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-6 pb-2 bg-[#FFF8F2]/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-50 rounded-t-[32px]">
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-sans text-[11px] font-medium tracking-wide">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-sans text-[11px] font-medium tracking-wide">Explorar</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1A6B72]/10 dark:bg-[#1A6B72]/20 text-[#1A6B72] dark:text-[#26a6b5] rounded-full px-5 py-1 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-sans text-[11px] font-medium tracking-wide">Mis Animales</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-5 py-1 hover:text-[#1A6B72] dark:hover:text-[#26a6b5] active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-[11px] font-medium tracking-wide">Perfil</span>
+</div>
+</nav>
+</body></html>
