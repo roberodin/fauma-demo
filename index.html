@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Fauma — Demo Navegable</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,12 +11,13 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: #1a1a1e;
     color: #fff;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     overflow: hidden;
+    touch-action: pan-y;
   }
 
-  /* --- Sidebar --- */
+  /* ===================== SIDEBAR (desktop only) ===================== */
   .sidebar {
     width: 280px;
     background: #222228;
@@ -32,45 +33,20 @@
     border-bottom: 1px solid #333;
   }
 
-  .sidebar-header h1 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1A6B72;
-    letter-spacing: 2px;
-  }
+  .sidebar-header h1 { font-size: 18px; font-weight: 700; color: #1A6B72; letter-spacing: 2px; }
+  .sidebar-header p { font-size: 11px; color: #888; margin-top: 4px; }
 
-  .sidebar-header p {
-    font-size: 11px;
-    color: #888;
-    margin-top: 4px;
-  }
-
-  .flow-group {
-    padding: 8px 0;
-    border-bottom: 1px solid #2a2a30;
-  }
+  .flow-group { padding: 8px 0; border-bottom: 1px solid #2a2a30; }
 
   .flow-group-title {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #F4847A;
-    padding: 8px 16px 4px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: #F4847A; padding: 8px 16px 4px;
   }
 
   .screen-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 8px 16px;
-    border: none;
-    background: transparent;
-    color: #ccc;
-    font-size: 12px;
-    cursor: pointer;
-    text-align: left;
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 8px 16px; border: none; background: transparent;
+    color: #ccc; font-size: 12px; cursor: pointer; text-align: left;
     transition: all 0.15s;
   }
 
@@ -78,168 +54,196 @@
   .screen-btn.active { background: #1A6B72; color: #fff; font-weight: 600; }
 
   .screen-btn .num {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: 700;
-    flex-shrink: 0;
+    width: 22px; height: 22px; border-radius: 50%; background: #333;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; flex-shrink: 0;
   }
-
   .screen-btn.active .num { background: #005258; }
 
-  /* --- Main area --- */
+  .shortcuts {
+    padding: 12px 16px; font-size: 10px; color: #555;
+    border-top: 1px solid #2a2a30;
+  }
+  .shortcuts kbd { background: #333; padding: 1px 5px; border-radius: 3px; font-size: 10px; }
+
+  /* ===================== MAIN ===================== */
   .main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #111114;
-    overflow: hidden;
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; background: #111114; overflow: hidden;
+    position: relative;
   }
 
-  /* Toolbar */
+  /* Desktop toolbar */
   .toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px;
-    background: #1a1a1e;
-    width: 100%;
-    border-bottom: 1px solid #333;
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; padding: 12px; background: #1a1a1e;
+    width: 100%; border-bottom: 1px solid #333;
   }
 
   .toolbar button {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid #444;
-    background: #222;
-    color: #ccc;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.15s;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid #444; background: #222; color: #ccc;
+    font-size: 16px; cursor: pointer; display: flex;
+    align-items: center; justify-content: center; transition: all 0.15s;
   }
-
   .toolbar button:hover { background: #1A6B72; border-color: #1A6B72; color: #fff; }
   .toolbar button:disabled { opacity: 0.3; cursor: default; background: #222; border-color: #333; }
 
-  .toolbar .screen-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-    min-width: 260px;
-    text-align: center;
-  }
+  .toolbar .screen-title { font-size: 13px; font-weight: 600; color: #fff; min-width: 260px; text-align: center; }
+  .toolbar .counter { font-size: 11px; color: #888; }
 
-  .toolbar .counter {
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Phone frame */
+  /* Desktop phone frame */
   .phone-wrapper {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    overflow: hidden;
+    flex: 1; display: flex; align-items: center;
+    justify-content: center; padding: 20px; overflow: hidden;
   }
 
   .phone-frame {
-    width: 390px;
-    height: 844px;
-    border-radius: 44px;
-    border: 4px solid #333;
-    background: #000;
-    overflow: hidden;
+    width: 390px; height: 844px; border-radius: 44px;
+    border: 4px solid #333; background: #000; overflow: hidden;
     box-shadow: 0 0 60px rgba(0,0,0,0.5), 0 0 0 1px #222;
-    position: relative;
-    flex-shrink: 0;
+    position: relative; flex-shrink: 0;
   }
 
-  /* Notch removed */
+  .phone-frame iframe { width: 100%; height: 100%; border: none; background: #FFF8F2; }
 
-  .phone-frame iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #FFF8F2;
-  }
-
-  /* Transition overlay */
+  /* Transition */
   .transition-overlay {
-    position: absolute;
-    inset: 0;
-    background: #000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s;
-    border-radius: 40px;
-    z-index: 5;
+    position: absolute; inset: 0; background: #000; opacity: 0;
+    pointer-events: none; transition: opacity 0.15s; z-index: 5;
   }
+  .transitioning .transition-overlay { opacity: 1; }
 
-  .transitioning .transition-overlay {
-    opacity: 1;
-  }
-
-  /* Flow indicator dots */
-  .flow-dots {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    padding: 8px;
-  }
-
-  .flow-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #333;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
+  /* Flow dots (desktop) */
+  .flow-dots { display: flex; gap: 6px; justify-content: center; padding: 8px; }
+  .flow-dot { width: 8px; height: 8px; border-radius: 50%; background: #333; cursor: pointer; transition: all 0.2s; }
   .flow-dot.active { background: #1A6B72; transform: scale(1.3); }
   .flow-dot.visited { background: #F4847A; }
 
-  /* Keyboard shortcuts hint */
-  .shortcuts {
-    padding: 12px 16px;
-    font-size: 10px;
-    color: #555;
-    border-top: 1px solid #2a2a30;
+  /* ===================== MOBILE: fullscreen + swipe ===================== */
+  .mobile-header {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,30,0.92); backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 16px; padding-top: max(12px, env(safe-area-inset-top));
   }
 
-  .shortcuts kbd {
-    background: #333;
-    padding: 1px 5px;
-    border-radius: 3px;
-    font-size: 10px;
+  .mobile-header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .mobile-title { font-size: 14px; font-weight: 600; color: #fff; flex: 1; text-align: center; }
+  .mobile-counter { font-size: 10px; color: #888; text-align: center; margin-top: 2px; }
+  .mobile-flow-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: #F4847A; text-align: center; margin-top: 2px;
+  }
+
+  .mobile-nav-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.1);
+    color: #fff; font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .mobile-nav-btn:disabled { opacity: 0.2; }
+  .mobile-nav-btn.menu-btn { font-size: 20px; }
+
+  /* Mobile fullscreen iframe */
+  .mobile-frame {
+    display: none;
+    position: fixed; inset: 0; z-index: 50;
+    background: #FFF8F2;
+  }
+  .mobile-frame iframe {
+    width: 100%; height: 100%; border: none; background: #FFF8F2;
+  }
+
+  /* Mobile swipe hint */
+  .swipe-hint {
+    display: none;
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+    z-index: 110; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff; font-size: 12px; padding: 8px 20px; border-radius: 100px;
+    pointer-events: none; opacity: 0; transition: opacity 0.5s;
+  }
+  .swipe-hint.show { opacity: 1; }
+
+  /* Mobile progress bar */
+  .mobile-progress {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 200;
+  }
+  .mobile-progress-bar {
+    height: 100%; background: linear-gradient(90deg, #005258, #1A6B72);
+    transition: width 0.3s ease;
+  }
+
+  /* ===================== MENU DRAWER ===================== */
+  .menu-overlay {
+    display: none; position: fixed; inset: 0; z-index: 500;
+    background: rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s;
+  }
+  .menu-overlay.open { opacity: 1; }
+
+  .menu-drawer {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 300px;
+    max-width: 85vw; background: #222228; transform: translateX(100%);
+    transition: transform 0.3s ease; overflow-y: auto;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .menu-overlay.open .menu-drawer { transform: translateX(0); }
+
+  .menu-drawer .sidebar-header { padding: 20px; border-bottom: 1px solid #333; }
+  .menu-drawer .flow-group { padding: 8px 0; border-bottom: 1px solid #2a2a30; }
+  .menu-drawer .flow-group-title {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: #F4847A; padding: 8px 16px 4px;
+  }
+  .menu-drawer .menu-item {
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 12px 16px; border: none; background: transparent;
+    color: #ccc; font-size: 14px; cursor: pointer; text-align: left;
+  }
+  .menu-drawer .menu-item.active { background: #1A6B72; color: #fff; font-weight: 600; }
+  .menu-drawer .menu-item .num {
+    width: 26px; height: 26px; border-radius: 50%; background: #333;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+  .menu-drawer .menu-item.active .num { background: #005258; }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .toolbar { display: none; }
+    .phone-wrapper { display: none; }
+    .flow-dots { display: none; }
+    .shortcuts { display: none; }
+
+    .mobile-header { display: block; }
+    .mobile-frame { display: block; }
+    .mobile-progress { display: block; }
+
+    .main { display: none; }
+
+    body { background: #FFF8F2; }
   }
 </style>
 </head>
 <body>
 
+<!-- ======== DESKTOP LAYOUT ======== -->
 <div class="sidebar">
   <div class="sidebar-header">
     <h1>FAUMA</h1>
     <p>Prototipo navegable &middot; 25 pantallas</p>
   </div>
-
   <div id="screen-list"></div>
-
   <div class="shortcuts">
-    <kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navegar &middot; <kbd>1</kbd>-<kbd>9</kbd> Flujo
+    <kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navegar
   </div>
 </div>
 
@@ -263,52 +267,68 @@
   <div class="flow-dots" id="flow-dots"></div>
 </div>
 
+<!-- ======== MOBILE LAYOUT ======== -->
+<div class="mobile-progress">
+  <div class="mobile-progress-bar" id="mobile-progress-bar"></div>
+</div>
+
+<div class="mobile-header">
+  <div class="mobile-header-inner">
+    <button class="mobile-nav-btn" id="mob-prev" onclick="navigate(-1)">&larr;</button>
+    <div>
+      <div class="mobile-title" id="mob-title">Welcome</div>
+      <div class="mobile-flow-badge" id="mob-flow">Onboarding</div>
+      <div class="mobile-counter" id="mob-counter">1 / 25</div>
+    </div>
+    <button class="mobile-nav-btn menu-btn" id="mob-menu" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</div>
+
+<div class="mobile-frame" id="mobile-frame">
+  <iframe id="mob-screen-frame" src="screens/01-welcome.html" style="padding-top: 80px;"></iframe>
+</div>
+
+<div class="swipe-hint" id="swipe-hint">Desliza para navegar &rarr;</div>
+
+<!-- ======== MENU DRAWER ======== -->
+<div class="menu-overlay" id="menu-overlay" onclick="closeMenuFromOverlay(event)">
+  <div class="menu-drawer" id="menu-drawer"></div>
+</div>
+
 <script>
 const screens = [
-  // Onboarding & Acceso
   { file: '01-welcome.html',         title: 'Welcome',                        flow: 'Onboarding' },
   { file: '02-onboarding1.html',     title: 'Elige tu especie',               flow: 'Onboarding' },
   { file: '03-onboarding2.html',     title: 'Apoya con tu suscripcion',       flow: 'Onboarding' },
   { file: '04-onboarding3.html',     title: 'Descubre contenido exclusivo',   flow: 'Onboarding' },
   { file: '05-login.html',           title: 'Login / Registro',               flow: 'Onboarding' },
-
-  // Explorar
   { file: '06-explorar.html',        title: 'Explorar',                       flow: 'Explorar' },
   { file: '07-ficha-especie.html',   title: 'Ficha Especie - Caretta',        flow: 'Explorar' },
   { file: '08-ficha-proyecto.html',  title: 'Ficha Proyecto - Pintarroja',    flow: 'Explorar' },
-
-  // Conversion
   { file: '09-nivel-merch.html',     title: 'Nivel + Merchandising',          flow: 'Conversion' },
   { file: '10-direccion-envio.html', title: 'Direccion de Envio',             flow: 'Conversion' },
   { file: '11-regalo.html',          title: 'Configurar Regalo',              flow: 'Conversion' },
   { file: '12-confirmar-pago.html',  title: 'Confirmar Pago',                flow: 'Conversion' },
   { file: '13-exito.html',           title: 'Exito de Suscripcion',          flow: 'Conversion' },
-
-  // Home
   { file: '14-home.html',            title: 'Home - Dashboard',               flow: 'Home' },
-
-  // Mi Animal (Especie)
   { file: '15-mis-animales.html',    title: 'Mis Animales - Lista',           flow: 'Mi Animal' },
   { file: '16-animal-detalle.html',  title: 'Mi Animal - Detalle',            flow: 'Mi Animal' },
   { file: '17-animal-galeria.html',  title: 'Mi Animal - Galeria',            flow: 'Mi Animal' },
   { file: '18-curiosidades.html',    title: 'Curiosidades',                   flow: 'Mi Animal' },
   { file: '19-diario-salud.html',    title: 'Diario de Salud',                flow: 'Mi Animal' },
-
-  // Mi Proyecto
   { file: '20-proyecto-ficha.html',  title: 'Mi Proyecto - Ficha',            flow: 'Mi Proyecto' },
   { file: '21-profundizando.html',   title: 'Mi Proyecto - Profundizando',    flow: 'Mi Proyecto' },
   { file: '22-equipo.html',          title: 'Mi Proyecto - Equipo',           flow: 'Mi Proyecto' },
   { file: '23-resultados.html',      title: 'Mi Proyecto - Resultados',       flow: 'Mi Proyecto' },
   { file: '24-galeria-proyecto.html',title: 'Mi Proyecto - Galeria',          flow: 'Mi Proyecto' },
-
-  // Perfil
   { file: '25-perfil.html',          title: 'Perfil',                         flow: 'Perfil' },
 ];
 
 let currentIndex = 0;
 const visited = new Set([0]);
+const isMobile = () => window.innerWidth <= 768;
 
-// Build sidebar
+// ===== SIDEBAR (desktop) =====
 function buildSidebar() {
   const list = document.getElementById('screen-list');
   let currentFlow = '';
@@ -329,7 +349,7 @@ function buildSidebar() {
   });
 }
 
-// Build flow dots
+// ===== FLOW DOTS (desktop) =====
 function buildDots() {
   const dots = document.getElementById('flow-dots');
   dots.innerHTML = '';
@@ -341,64 +361,149 @@ function buildDots() {
   });
 }
 
-function updateUI() {
-  // Title
-  document.getElementById('screen-title').textContent = screens[currentIndex].title;
-  document.getElementById('screen-counter').textContent = `${currentIndex + 1} / ${screens.length}`;
+// ===== MENU DRAWER (mobile) =====
+function buildMenu() {
+  const drawer = document.getElementById('menu-drawer');
+  let html = '<div class="sidebar-header"><h1 style="font-size:18px;font-weight:700;color:#1A6B72;letter-spacing:2px">FAUMA</h1><p style="font-size:11px;color:#888;margin-top:4px">25 pantallas</p></div>';
+  let currentFlow = '';
+  screens.forEach((s, i) => {
+    if (s.flow !== currentFlow) {
+      currentFlow = s.flow;
+      html += `<div class="flow-group"><div class="flow-group-title">${currentFlow}</div>`;
+    }
+    html += `<button class="menu-item" data-menu-index="${i}" onclick="goTo(${i}); closeMenu()"><span class="num">${i + 1}</span>${s.title}</button>`;
+    const nextFlow = screens[i + 1]?.flow;
+    if (nextFlow !== currentFlow) html += '</div>';
+  });
+  drawer.innerHTML = html;
+}
 
-  // Buttons
+function toggleMenu() {
+  const overlay = document.getElementById('menu-overlay');
+  overlay.style.display = 'block';
+  requestAnimationFrame(() => overlay.classList.add('open'));
+  updateMenuActive();
+}
+
+function closeMenu() {
+  const overlay = document.getElementById('menu-overlay');
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; }, 300);
+}
+
+function closeMenuFromOverlay(e) {
+  if (e.target === document.getElementById('menu-overlay')) closeMenu();
+}
+
+function updateMenuActive() {
+  document.querySelectorAll('.menu-item').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.menuIndex) === currentIndex);
+  });
+}
+
+// ===== UPDATE UI =====
+function updateUI() {
+  const s = screens[currentIndex];
+
+  // Desktop
+  document.getElementById('screen-title').textContent = s.title;
+  document.getElementById('screen-counter').textContent = `${currentIndex + 1} / ${screens.length}`;
   document.getElementById('btn-prev').disabled = currentIndex === 0;
   document.getElementById('btn-next').disabled = currentIndex === screens.length - 1;
 
-  // Sidebar active state
   document.querySelectorAll('.screen-btn').forEach(btn => {
     btn.classList.toggle('active', parseInt(btn.dataset.index) === currentIndex);
   });
-
-  // Scroll sidebar to active
   const activeBtn = document.querySelector('.screen-btn.active');
   if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-  // Flow dots
   const dots = document.querySelectorAll('.flow-dot');
   dots.forEach((dot, i) => {
     dot.className = 'flow-dot';
     if (i === currentIndex) dot.classList.add('active');
     else if (visited.has(i)) dot.classList.add('visited');
   });
+
+  // Mobile
+  document.getElementById('mob-title').textContent = s.title;
+  document.getElementById('mob-flow').textContent = s.flow;
+  document.getElementById('mob-counter').textContent = `${currentIndex + 1} / ${screens.length}`;
+  document.getElementById('mob-prev').disabled = currentIndex === 0;
+  document.getElementById('mobile-progress-bar').style.width = `${((currentIndex + 1) / screens.length) * 100}%`;
+
+  updateMenuActive();
 }
 
+// ===== NAVIGATION =====
 function goTo(index) {
   if (index < 0 || index >= screens.length || index === currentIndex) return;
 
+  const src = 'screens/' + screens[index].file;
+
+  // Desktop transition
   const frame = document.getElementById('phone-frame');
   frame.classList.add('transitioning');
-
   setTimeout(() => {
-    currentIndex = index;
-    visited.add(index);
-    document.getElementById('screen-frame').src = 'screens/' + screens[index].file;
-    updateUI();
-
+    document.getElementById('screen-frame').src = src;
     setTimeout(() => frame.classList.remove('transitioning'), 100);
   }, 150);
+
+  // Mobile - direct
+  document.getElementById('mob-screen-frame').src = src;
+
+  currentIndex = index;
+  visited.add(index);
+  updateUI();
 }
 
-function navigate(delta) {
-  goTo(currentIndex + delta);
-}
+function navigate(delta) { goTo(currentIndex + delta); }
 
-// Keyboard navigation
+// ===== SWIPE (mobile) =====
+let touchStartX = 0;
+let touchStartY = 0;
+let swiping = false;
+
+document.addEventListener('touchstart', (e) => {
+  if (!isMobile()) return;
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  swiping = true;
+}, { passive: true });
+
+document.addEventListener('touchend', (e) => {
+  if (!isMobile() || !swiping) return;
+  swiping = false;
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    if (dx < 0) navigate(1);
+    else navigate(-1);
+  }
+}, { passive: true });
+
+// ===== KEYBOARD (desktop) =====
 document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') navigate(-1);
   else if (e.key === 'ArrowRight') navigate(1);
   else if (e.key === 'Home') goTo(0);
   else if (e.key === 'End') goTo(screens.length - 1);
+  else if (e.key === 'Escape') closeMenu();
 });
 
+// ===== SWIPE HINT =====
+function showSwipeHint() {
+  if (!isMobile()) return;
+  const hint = document.getElementById('swipe-hint');
+  hint.classList.add('show');
+  setTimeout(() => hint.classList.remove('show'), 3000);
+}
+
+// ===== INIT =====
 buildSidebar();
 buildDots();
+buildMenu();
 updateUI();
+setTimeout(showSwipeHint, 1000);
 </script>
 </body>
 </html>
