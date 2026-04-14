@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-
-<html lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -98,9 +96,9 @@
 <!-- TopAppBar -->
 <div class="flex items-center bg-surface p-4 pt-6 justify-between">
 <div class="text-on-surface flex size-12 shrink-0 items-center justify-center cursor-pointer">
-<span class="material-symbols-outlined">arrow_back</span>
+<span class="material-symbols-outlined" style="">arrow_back</span>
 </div>
-<h2 class="text-on-surface text-xl font-headline font-bold leading-tight tracking-tight flex-1">Confirmar pago</h2>
+<h2 class="text-on-surface text-xl font-headline font-bold leading-tight tracking-tight flex-1" style="">Confirmar pago</h2>
 <div class="size-12"></div>
 </div>
 <div class="px-6 flex flex-col gap-8">
@@ -109,58 +107,62 @@
 <div class="flex items-start justify-between">
 <div class="flex flex-col gap-2">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">egg</span>
-<span class="font-label text-xs uppercase tracking-widest text-secondary font-semibold">Suscripción Activa</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">egg</span>
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-semibold" style="">Apoyo Único</span>
 </div>
-<h3 class="font-headline text-2xl font-bold text-on-surface">Tortuga Caretta caretta</h3>
+<h3 class="font-headline text-2xl font-bold text-on-surface" style="">Tortuga Caretta caretta</h3>
 </div>
 </div>
 <div class="flex flex-wrap items-center gap-3">
-<span class="bg-primary-container/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium">Nivel: Hermano</span>
-<p class="font-headline text-3xl font-bold text-primary">€15<span class="text-sm font-body font-normal text-secondary">/mes</span></p>
+<span class="bg-primary-container/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium" style="">Nivel: Hermano</span>
+<p class="font-headline text-3xl font-bold text-primary" style="">€15</p>
 </div>
 <div class="flex items-center gap-2 bg-surface-container-lowest/50 p-3 rounded-lg">
-<span class="material-symbols-outlined text-secondary text-lg">redeem</span>
-<p class="text-sm text-secondary">Incluye peluche de tortuga orgánica</p>
+<span class="material-symbols-outlined text-secondary text-lg" style="">redeem</span>
+<p class="text-sm text-secondary" style="">Incluye regalo (Merchan 1)</p>
 </div>
 <!-- Decorative Organic Shape -->
 <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
 </div>
 <!-- Payment Method Section -->
 <div class="flex flex-col gap-4">
-<h4 class="font-label text-sm font-bold uppercase tracking-wider text-secondary">Método de pago</h4>
-<div class="flex flex-col gap-3">
-<!-- Card Number -->
+<h4 class="font-label text-sm font-bold uppercase tracking-wider text-secondary" style="">Seleccionar método de pago</h4>
+<div class="grid grid-cols-1 gap-3">
+<!-- Wallet Options -->
+<div class="flex gap-3">
+<button class="flex-1 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center border border-transparent hover:border-primary/20 transition-all" style="">
+<svg class="h-6" fill="currentColor" viewBox="0 0 100 40"><path d="M46.7 13.7c-1.3-.1-2.5.4-3.2 1.3-.7.9-1.1 2.2-1.1 3.7 0 1.5.4 2.8 1.1 3.7.7.9 1.9 1.3 3.2 1.3 1.3 0 2.5-.4 3.2-1.3.7-.9 1.1-2.2 1.1-3.7 0-1.5-.4-2.8-1.1-3.7-.7-.9-1.9-1.3-3.2-1.3zm13.6-5.8h-2.3c-.4 0-.7.2-.8.6L52 23.3l-2.6-14.7c-.1-.4-.4-.7-.8-.7h-2.3c-.4 0-.8.3-.9.7l-2.6 14.7-5.1-14.7c-.1-.4-.4-.7-.8-.7h-2.3c-.4 0-.8.3-.9.7l-4.1 24.3h2.3c.4 0 .8-.3.9-.7l2.9-18 4.9 14.1c.1.4.4.7.8.7h1.9c.4 0 .7-.3.8-.7l2.9-14.1 2.9 14.1c.1.4.4.7.8.7h1.9c.4 0 .7-.3.8-.7l4.9-14.1 2.9 18c.1.4.4.7.9.7h2.3l-4.1-24.3c-.1-.4-.5-.7-.9-.7z"></path></svg>
+<span class="sr-only" style="">Apple Pay</span>
+</button>
+<button class="flex-1 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center border border-transparent hover:border-primary/20 transition-all" style="">
+<svg class="h-6" fill="currentColor" viewBox="0 0 100 40"><path d="M44 20c0-2.2-1.8-4-4-4h-8v8h8c2.2 0 4-1.8 4-4zm-8 2v-4h4c1.1 0 2 .9 2 2s-.9 2-2 2h-4z"></path></svg>
+<span class="font-bold text-on-surface" style="">Google Pay</span>
+</button>
+</div>
+<!-- PayPal -->
+<button class="w-full h-14 bg-surface-container-low rounded-2xl flex items-center justify-center gap-2 border border-transparent hover:border-primary/20 transition-all" style="">
+<span class="material-symbols-outlined text-[#003087]" style="">account_balance_wallet</span>
+<span class="font-bold text-[#003087]" style="">PayPal</span>
+</button>
+<!-- Credit Card Input -->
 <div class="relative group">
-<input class="w-full h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="Número de tarjeta" type="text"/>
+<input class="w-full h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="Tarjeta de crédito" type="text">
 <div class="absolute right-6 top-1/2 -translate-y-1/2 flex gap-2">
-<span class="material-symbols-outlined text-secondary">credit_card</span>
+<span class="material-symbols-outlined text-secondary" style="">credit_card</span>
 </div>
 </div>
 <!-- Date and CVV -->
 <div class="flex gap-3">
-<input class="w-1/2 h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="MM / AA" type="text"/>
-<input class="w-1/2 h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="CVV" type="text"/>
+<input class="w-1/2 h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="MM / AA" type="text">
+<input class="w-1/2 h-14 px-6 rounded-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all placeholder:text-outline" placeholder="CVV" type="text">
 </div>
 </div>
-</div>
-<!-- Billing Toggle -->
-<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low/50">
-<div class="flex flex-col">
-<span class="text-sm font-semibold text-on-surface">Facturación anual</span>
-<span class="text-xs text-primary font-medium">Ahorra un 15%</span>
-</div>
-<button class="w-12 h-6 rounded-full bg-primary/20 relative flex items-center px-1">
-<div class="size-4 bg-primary rounded-full"></div>
-</button>
 </div>
 <!-- Primary CTA -->
-<button class="coral-cta w-full py-5 rounded-full text-white font-bold text-lg shadow-xl shadow-on-surface/5 active:scale-[0.98] transition-transform">
-                    Confirmar suscripción · €15/mes
+<button class="coral-cta w-full py-5 rounded-full text-white font-bold text-lg shadow-xl shadow-on-surface/5 active:scale-[0.98] transition-transform" style="">
+                    Confirmar pago · €15
                 </button>
-<p class="text-center text-xs text-outline px-8 leading-relaxed">
-                    Al confirmar, aceptas nuestros términos de servicio y la política de conservación de hábitats marinos.
-                </p>
+<p class="text-center text-xs text-outline px-8 leading-relaxed" style="">Al confirmar, aceptas los términos y condiciones</p>
 </div>
 </section>
 </main>
