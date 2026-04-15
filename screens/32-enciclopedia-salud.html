@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fauma - Caretta caretta Veterinary Health Encyclopedia</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#7e2a25",
+                    "on-surface": "#1e1b18",
+                    "surface-container-high": "#eee7e1",
+                    "on-primary-container": "#a1e9f1",
+                    "background": "#fff8f2",
+                    "surface-container-highest": "#e8e1dc",
+                    "outline": "#6f797a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#8bd2da",
+                    "surface-variant": "#e8e1dc",
+                    "tertiary": "#822d28",
+                    "surface-container": "#f3ede7",
+                    "on-secondary-container": "#596577",
+                    "secondary-fixed-dim": "#bbc7dc",
+                    "primary-fixed": "#a6eff6",
+                    "outline-variant": "#bec8c9",
+                    "primary-container": "#1a6b72",
+                    "inverse-on-surface": "#f6f0ea",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#a1443d",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#004f55",
+                    "on-secondary-fixed": "#101c2c",
+                    "inverse-surface": "#33302c",
+                    "secondary-container": "#d7e3f9",
+                    "surface-container-low": "#f9f2ec",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3c4859",
+                    "primary": "#005258",
+                    "secondary-fixed": "#d7e3f9",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-surface-variant": "#3f484a",
+                    "surface-dim": "#dfd9d3",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#15686f",
+                    "surface": "#fff8f2",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#410003",
+                    "on-primary": "#ffffff",
+                    "secondary": "#535f71",
+                    "surface-bright": "#fff8f2",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "on-tertiary-container": "#ffd3cf",
+                    "on-background": "#1e1b18",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#002022",
+                    "inverse-primary": "#8bd2da"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-stone-50 dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-50">
+<div class="flex items-center px-4 h-16 w-full max-w-7xl mx-auto">
+<button class="material-symbols-outlined text-teal-700 dark:text-teal-400 p-2 hover:bg-stone-100 dark:hover:bg-stone-900 transition-colors rounded-full active:scale-95 duration-150">arrow_back</button>
+<h1 class="font-serif text-xl font-bold italic ml-2 text-teal-700 dark:text-teal-400">Caretta caretta</h1>
+</div>
+</header>
+<!-- Navigation Drawer (Encyclopedia Context) -->
+<nav class="max-w-7xl mx-auto px-4 mt-6">
+<!-- Main Tabs (Pill Style) -->
+<div class="flex gap-2 overflow-x-auto pb-4 no-scrollbar">
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-sans text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-stone-200 dark:hover:bg-stone-800 transition-all">Ficha Técnica</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-sans text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-stone-200 dark:hover:bg-stone-800 transition-all">Galería</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-sans text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-stone-200 dark:hover:bg-stone-800 transition-all">Curiosidades</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-sans text-sm font-bold bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-200 transition-all">Diario de Salud</button>
+</div>
+<!-- Sub-Tabs (Underline Style) -->
+<div class="flex gap-8 border-b border-stone-200 dark:border-stone-800 mt-2">
+<button class="pb-3 text-teal-700 dark:text-teal-400 border-b-2 border-teal-700 font-medium text-sm">Enciclopedia</button>
+<button class="pb-3 text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-teal-600 transition-colors">Diario Veterinaria</button>
+</div>
+</nav>
+<!-- Main Content: Procedure Grid -->
+<main class="max-w-7xl mx-auto px-4 mt-8">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-primary mb-2">Procedimientos Clínicos</h2>
+<p class="text-on-surface-variant font-body text-sm max-w-2xl">Manual técnico especializado para el diagnóstico y tratamiento de la tortuga boba. Guías protocolizadas de intervención veterinaria.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+<!-- Card 1 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="blood_type">bloodtype</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Analítica de sangre</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Valores hematológicos y bioquímicos de referencia para la evaluación del estado sistémico y metabólico.</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="radiology">radiology</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Radiología</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Proyecciones diagnósticas para la evaluación ósea, pulmonar y detección de cuerpos extraños digestivos.</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="ultrasound">radiology</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Ecografía</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Visualización de órganos internos y evaluación folicular a través de las ventanas axilares e inguinales.</p>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Fluidoterapia</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Protocolos de rehidratación intravenosa e intracelómica para pacientes críticos y deshidratados.</p>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="content_cut">content_cut</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Desbridamiento</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Limpieza y eliminación quirúrgica de tejido necrótico en lesiones de caparazón y tejidos blandos.</p>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="fluid">fluid</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Sondaje</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Técnicas de cateterismo y sondaje esofágico para administración de fármacos y nutrición forzada.</p>
+</div>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="nfc">nfc</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Marcaje PIT tags</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Identificación electrónica mediante transpondedores integrados para seguimiento de poblaciones.</p>
+</div>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="microscope">magnification_small</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Necropsia</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Protocolo sistemático post-mortem para determinar la causa de muerte y estudios epidemiológicos.</p>
+</div>
+</div>
+</div>
+<!-- Card 9 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="bubble_chart">bubble_chart</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Embolia gaseosa</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Manejo de la enfermedad descompresiva en tortugas capturadas accidentalmente por redes de arrastre.</p>
+</div>
+</div>
+</div>
+<!-- Card 10 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Alimentación asistida</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Dietas específicas y técnicas de alimentación forzada para ejemplares convalecientes o anoréxicos.</p>
+</div>
+</div>
+</div>
+<!-- Card 11 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="healing">healing</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Amputaciones</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Criterios quirúrgicos y postoperatorios para amputaciones de aletas debido a enmallamientos severos.</p>
+</div>
+</div>
+</div>
+<!-- Card 12 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="visibility">visibility</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Problemas oculares</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Diagnóstico y tratamiento de conjuntivitis, úlceras corneales y deficiencias de vitamina A.</p>
+</div>
+</div>
+</div>
+<!-- Card 13 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="egg">egg</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Hembra anidante</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Cuidados especializados y monitorización de hembras durante el proceso de desove y anidación.</p>
+</div>
+</div>
+</div>
+<!-- Card 14 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="child_care">child_care</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Neonatos</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Manejo de crías recién nacidas, criterios de liberación y cuidados en tanques de crecimiento.</p>
+</div>
+</div>
+</div>
+<!-- Card 15 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="dna">genetics</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Determinación sexo</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Técnicas de sexado laparoscópico y análisis hormonales en ejemplares juveniles e inmaduros.</p>
+</div>
+</div>
+</div>
+<!-- Card 16 -->
+<div class="group bg-teal-50/50 dark:bg-teal-900/10 p-6 rounded-lg hover:shadow-lg transition-all border border-transparent hover:border-teal-200 dark:hover:border-teal-800">
+<div class="flex items-start gap-4">
+<div class="bg-white dark:bg-teal-900/40 p-3 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="coronavirus">coronavirus</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Enfermedades infecciosas</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Protocolos de aislamiento y tratamiento para patologías virales como la fibropapilomatosis.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 h-20 pb-2 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md shadow-lg rounded-t-full border-t border-stone-100 dark:border-stone-800">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-sans text-[11px] font-semibold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="explore">explore</span>
+<span class="font-sans text-[11px] font-semibold">Explorar</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-teal-600 text-white rounded-full px-5 py-2 scale-110 shadow-md">
+<span class="material-symbols-outlined text-2xl" data-icon="potted_plant">potted_plant</span>
+<span class="font-sans text-[11px] font-semibold">Mis Apoyos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-sans text-[11px] font-semibold">Perfil</span>
+</div>
+</nav>
+<!-- Floating Action Button (Optional Contextual) -->
+<div class="fixed right-6 bottom-28">
+<button class="bg-tertiary text-on-tertiary p-4 rounded-full shadow-xl active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="add" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>

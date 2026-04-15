@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-variant": "#e8e1dc",
+                        "tertiary-container": "#a1443d",
+                        "on-primary-container": "#a1e9f1",
+                        "on-background": "#1e1b18",
+                        "surface-container-low": "#f9f2ec",
+                        "surface": "#fff8f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "on-secondary-container": "#596577",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#822d28",
+                        "on-surface": "#1e1b18",
+                        "surface-container": "#f3ede7",
+                        "secondary-fixed": "#d7e3f9",
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "on-tertiary-container": "#ffd3cf",
+                        "primary-fixed": "#a6eff6",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#002022",
+                        "inverse-surface": "#33302c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410003",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "secondary": "#535f71",
+                        "on-secondary-fixed": "#101c2c",
+                        "inverse-primary": "#8bd2da",
+                        "inverse-on-surface": "#f6f0ea",
+                        "background": "#fff8f2",
+                        "surface-tint": "#15686f",
+                        "surface-container-high": "#eee7e1",
+                        "outline": "#6f797a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "primary": "#005258",
+                        "on-surface-variant": "#3f484a",
+                        "tertiary-fixed": "#ffdad6",
+                        "secondary-container": "#d7e3f9",
+                        "primary-fixed-dim": "#8bd2da",
+                        "primary-container": "#1a6b72",
+                        "surface-dim": "#dfd9d3",
+                        "outline-variant": "#bec8c9",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .masonry-grid { columns: 2; column-gap: 1rem; }
+        .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased pb-24 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-orange-50/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-teal-800 dark:text-teal-400" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-serif italic text-xl text-teal-800 dark:text-teal-400 leading-none">Caretta caretta</h1>
+<span class="text-[10px] uppercase tracking-widest font-bold text-tertiary">Hermano</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-teal-800 dark:text-teal-400" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 pt-6">
+<!-- Navigation Tabs (NavigationDrawer labels repurposed for top tabs) -->
+<div class="flex overflow-x-auto gap-2 mb-8 hide-scrollbar">
+<button class="flex-none px-6 py-2.5 rounded-full font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-orange-100 dark:hover:bg-slate-800 transition-colors duration-200">Ficha Técnica</button>
+<button class="flex-none px-6 py-2.5 rounded-full font-medium text-sm bg-teal-800 text-white dark:bg-teal-400 dark:text-slate-900 transition-colors duration-200 shadow-md">Galería</button>
+<button class="flex-none px-6 py-2.5 rounded-full font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-orange-100 dark:hover:bg-slate-800 transition-colors duration-200">Curiosidades</button>
+<button class="flex-none px-6 py-2.5 rounded-full font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-orange-100 dark:hover:bg-slate-800 transition-colors duration-200">Diario de Salud</button>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-3 overflow-x-auto mb-8 hide-scrollbar">
+<button class="px-5 py-2 rounded-full text-xs font-semibold bg-tertiary text-white shadow-sm">Todo</button>
+<button class="px-5 py-2 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant hover:bg-surface-container-highest transition-colors">Fotos</button>
+<button class="px-5 py-2 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant hover:bg-surface-container-highest transition-colors">Vídeos</button>
+<button class="px-5 py-2 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant hover:bg-surface-container-highest transition-colors">Acompáñanos</button>
+<button class="px-5 py-2 rounded-full text-xs font-semibold bg-surface-container text-on-surface-variant hover:bg-surface-container-highest transition-colors flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Cámara 24h
+            </button>
+</div>
+<!-- Featured Video Card -->
+<section class="mb-10">
+<div class="relative group rounded-xl overflow-hidden aspect-video shadow-xl cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cinematic shot of a large loggerhead sea turtle swimming through clear sunlit turquoise water with bubbles and light rays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkv02WukIV-LtFFZ3UNnoJjAUbvBK1H2ylsnnbL0CcPpgdHSneTI0AdyaDhpynYzRADgN8msJiJUonY0a-m4-KUf-Dvm8OpvaE-9yxdHLsPcEcNdsX9y5Yu_dwP_MdLtKj1OJQy9q7zV63AUoLO-vXD3Bq2k-BTjUlGo1t8dCOfE7AC3lqHRsPRNHOciAWa7tjzwiNIXqkyNLAImYkcxFNqL_c5fbqSTdq-aQkVc8snLv87rdP-IY3FCuCGzlY5UHE5HAfONHWIvYV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<h2 class="font-headline text-2xl text-white mb-1">Documental: Un día con la tortuga boba</h2>
+<p class="text-white/80 text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 12:34
+                    </p>
+</div>
+</div>
+</section>
+<!-- Photo Grid (Masonry) -->
+<section class="mb-12">
+<h3 class="font-headline text-2xl mb-6 text-primary flex items-center gap-2">
+                Momentos <span class="text-tertiary italic">vividos</span>
+</h3>
+<div class="masonry-grid">
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm hover:shadow-md transition-shadow" data-alt="Underwater view of a Caretta caretta sea turtle gliding over a vibrant coral reef with colorful fish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLkLQFGZwoTeASMES5QzDOHV-R0641JY927Xjy0GTP2PjLyaoBq6Iu6eQWJkFS1SwN84zR8lDuVm2Jyy3zn_Splkh6P2h4QJI74CHriggs5tB_OvR6bnVj_Vp_hTKA2i1M3_vXNLylMB2hOAC4jFpC5uDVIf4vDaTHknwHpQXRKMOe6oXwPBIl50d7wANMHHKfdBvxCs69-9Q0ZIEo4WcqyvXBxkpqHqvgWs3f0SxvkDGg8fPVxq7pn3F-q3bsD6AFQ1kJRLL6EB8Q"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm" data-alt="Wide shot of a pristine tropical nesting beach at dawn with turtle tracks in the soft sand leading to the ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ5SUcLBSXXwbmuj4Xu74VlYIZX1r5WfzHdVfAmU816u6s2MZ4nKj2n5dhE2jw65bwVQ6rSBZuKkZyZw54bf0Bgq1TBjEnsfFNG1gagtVvT4sj9JFvR4V35oH1Vt9aLZDmKx2CL-mglfhMmCJgZw1Tp3bQmPCOg1fOiR6V5tknUimymwtfJsGPX1TC8HQAICV3zTWfuPuHAG37cnaC7gRI2IeP-aph3BloavYGMbREc9A1yMKauPoZTuGwDLsgIGJtyPqU1ftAjRJL"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm" data-alt="Extreme close-up of a loggerhead sea turtle baby hatchling making its way to the ocean over small pebbles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUOwlfaZzxOtxe_afteRQGzKpQG3hpCRzlH2Ofim7PLk_woZzB-kdp1BUsMaD3eEILc45YyHlGWgCpMed0IEo7dw_29q05UDs2wDP1UvvHnlZ-8VpxIIVZje8WtQwC3-qnJ7EfERceY_uGX9NsBcCGRx43taJzIXxdoZhUaeay4OKFwlKYvWkNO6sssDmrp3OpFGXtKVjfxrc3_Jop2DRXwnTDU33LvFNDsuQ19tp7qJkgE5fD4DPmDD2nPHJTL7dq2V9Yfju0tzx"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm" data-alt="Detailed macro portrait of a Caretta caretta head showing beautiful scale patterns and ancient eyes in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzvZVwd3Fbx3Yi1-cVwrtyD8bJ407OmAn8QoUlZY9dnPQcYFJloHEoBvLh_NksfBdeRoF3Ejwrzqun0LH00gnGqgAu1rE62XfB60t2RWLSnd4BXDe5MHSYQMp4LdrCy64sV3mk0UUa3H9dv8n6DZ8kNIbX18_-qS8aaIvfrV6KNtnaskO4zcBLpKgkSHmn8wacVogdthW_1ze-eAbMKn_cJgq36xMMzEIcGmumxsn6QfcFXzxFDQn_PVCRypZJl-zNwW6v5xB63dhz"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm" data-alt="Majestic sea turtle swimming near the water surface with reflection of the blue sky and soft ripples" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhpMtTWw3X6J6py8sHWqt3xLk2VJTKonOhWl6P0udK2rbXHs_rkY5zXnrdtY87qd7QvzmCa0MMt9wZgF_dywGULp8-yzoi8dfUntZs_ESTfGD1eLI1iRrMrGPhAalGz7lIhCOLNsUuLt1tpNIVgM-z62RO5cVS800gaVKMJqIxBEBKsX3VdnIVCl637-Mu2sU6l6pnqZDAy_PPAcrYA_ycMaRQMK70XWrZoLdgKoRayIvvCCK0WsACou9ncdzBuGAPcdcEKpigPfU4"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg shadow-sm" data-alt="Deep sea coral garden with a sea turtle resting amongst colorful anemones and sea fans in dark blue water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkPfLHNrdKmGO0Hz7lG4GyOYoe4s0BVMeKJkk4O8vDqoB9RmdY3MjTSYHGnqk9DV7lk1onDdJcHrhBxHFoQKwQemxmenloANvir5rKhFc1i1Br_726_yeyJjsFUu4JOxQkkrTWz1n_7tq5l0_IZzb0Abc6vhjcGvzlnZ8cFQzCcNCcbNY-KJwBEbmvnZUI5mmvs08mighach77i2dnaYA3Rr0jUJzZm7ZliPSJCwRIF1oC9u54RPHa4dwbSzmgC8lMNXINXpBTqkd"/>
+</div>
+</div>
+</section>
+<!-- Acompáñanos Section -->
+<section class="mb-12">
+<div class="p-1 rounded-xl bg-gradient-to-br from-primary to-teal-100 shadow-lg">
+<div class="bg-white dark:bg-slate-900 rounded-lg overflow-hidden flex flex-col md:flex-row">
+<div class="relative md:w-2/5 aspect-video md:aspect-auto">
+<img class="w-full h-full object-cover" data-alt="A marine biologist in a teal uniform gently examining a sea turtle in a large research rehabilitation tank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsY6qZkd5BSQtKHw18NrmJiON46RN-QG1eaq4SdlJSxTDoLTPe5Sbk-MiEDNw8Zfc9mRjO4e-MYMjLTyLCxaLtEiTAPzbX84-nzAYzWSs8zcRtYynsaD2OImKTIJnCk4R7ZNsVKubgivL7z1Vycd5StCzImUIJizkh9tQuKVck4NZ7T7_igEmu0qHTA4d4zvoLvafO1o52YiOL0aWFfrQYxaIsecYbMAPbX6Hsib1uvkX2tkZimtpk0OvCOx2Pr4w5F0tSertakfoW"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6 md:w-3/5 flex flex-col justify-center">
+<span class="text-tertiary font-bold text-[10px] uppercase tracking-tighter mb-1">Especial Suscriptores</span>
+<h3 class="font-headline text-xl text-primary mb-3">Acompáñanos: Un día en el centro de recuperación</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Descubre el trabajo diario de nuestros biólogos cuidando de los ejemplares rescatados este mes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cámara 24h (Locked) -->
+<section class="mb-8">
+<div class="relative rounded-xl overflow-hidden aspect-video shadow-inner bg-slate-200">
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="Blurry wide angle view of a blue rehabilitation tank with water ripples and a turtle shadow seen from above" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6DlOX5fY8rpwpQFbeR_ICCwQ0FQ-Cg3MoHOgXIir2VEySA7WKt3QJ5RHTLA9zPcjseMtE-yvEotm7lZoB_Zzjh9DJzG2z2_EjLakD6CkAE1IFJw0VhYb2i9l0anvUlm5Qhr6mOjy0vtHu0UArTMiT64UPxUQLikwRwweFGp6bYOKWi6Z9_HotsQNo18h3PrTcekLu9lRG-0sqQwTPjhqPg4IEkdKAXyOQXhDiI8HG0NPWs00udyF6brXnIV3FZgFbbuT6V-Ka255U"/>
+<div class="absolute top-4 left-4 flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-white text-[10px] font-bold uppercase tracking-widest">En directo</span>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-black/50 backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-5xl mb-4" data-icon="lock">lock</span>
+<h4 class="text-white font-headline text-xl mb-2">Tanque de rehabilitación</h4>
+<div class="inline-flex items-center gap-2 bg-tertiary text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="workspace_premium">workspace_premium</span>
+                        Disponible en nivel Héroe
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-orange-50/95 dark:bg-slate-950/95 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] border-t border-slate-200 dark:border-slate-800">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-sans text-[11px] font-semibold">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-sans text-[11px] font-semibold">Explorar</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-teal-800/10 dark:bg-teal-400/20 text-teal-800 dark:text-teal-300 rounded-full px-5 py-1 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-sans text-[11px] font-semibold">Mis Animales</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-teal-600 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[11px] font-semibold">Perfil</span>
+</button>
+</nav>
+</body></html>

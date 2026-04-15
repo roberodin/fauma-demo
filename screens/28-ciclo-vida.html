@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fff8f2",
+                        "inverse-primary": "#8bd2da",
+                        "inverse-on-surface": "#f6f0ea",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "inverse-surface": "#33302c",
+                        "on-surface-variant": "#3f484a",
+                        "secondary": "#535f71",
+                        "tertiary": "#822d28",
+                        "primary-container": "#1a6b72",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fff8f2",
+                        "on-tertiary-fixed": "#410003",
+                        "on-background": "#1e1b18",
+                        "background": "#fff8f2",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eee7e1",
+                        "on-tertiary-container": "#ffd3cf",
+                        "surface-container-low": "#f9f2ec",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "tertiary-container": "#a1443d",
+                        "primary": "#005258",
+                        "on-secondary-fixed": "#101c2c",
+                        "on-primary-fixed": "#002022",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bec8c9",
+                        "outline": "#6f797a",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "tertiary-fixed": "#ffdad6",
+                        "primary-fixed": "#a6eff6",
+                        "secondary-container": "#d7e3f9",
+                        "on-surface": "#1e1b18",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#d7e3f9",
+                        "on-secondary-container": "#596577",
+                        "primary-fixed-dim": "#8bd2da",
+                        "on-primary-container": "#a1e9f1",
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-variant": "#e8e1dc",
+                        "surface-dim": "#dfd9d3",
+                        "surface-container": "#f3ede7",
+                        "surface-tint": "#15686f",
+                        "on-primary-fixed-variant": "#004f55",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-line {
+            background-image: radial-gradient(#1a6b72 1px, transparent 1px);
+            background-size: 1px 12px;
+            background-repeat: repeat-y;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif-italic { font-family: 'Newsreader', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top Bar Component -->
+<header class="flex items-center px-4 h-16 w-full sticky top-0 z-40 bg-[#FFF8F2] dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<button class="p-2 hover:bg-[#1A6B72]/10 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#1A6B72] dark:text-[#1A6B72]">arrow_back</span>
+</button>
+<div class="ml-2 flex flex-col">
+<h1 class="font-['Newsreader'] font-bold text-xl text-[#1A6B72] dark:text-[#1A6B72]">Curiosidades — Ciclo de Vida</h1>
+<span class="serif-italic italic text-sm text-secondary-fixed-variant leading-none">Caretta caretta</span>
+</div>
+</header>
+<!-- Main Tab Bar -->
+<nav class="flex overflow-x-auto no-scrollbar px-4 py-4 gap-2 bg-surface">
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-secondary font-medium text-sm hover:bg-secondary-container transition-colors">Ficha Técnica</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-secondary font-medium text-sm hover:bg-secondary-container transition-colors">Galería</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-[#1A6B72] text-white font-medium text-sm shadow-md">Curiosidades</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-secondary font-medium text-sm hover:bg-secondary-container transition-colors">Diario de Salud</button>
+</nav>
+<!-- Sub-Tabs Bar (Pill Chips) -->
+<div class="flex overflow-x-auto no-scrollbar px-6 gap-2 pb-6 border-b border-surface-container-high">
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary-container text-white text-xs font-bold shadow-sm">Ciclo de Vida</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-white border border-outline-variant text-on-surface-variant text-xs font-semibold">Sabías qué</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-white border border-outline-variant text-on-surface-variant text-xs font-semibold">Mitos</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-white border border-outline-variant text-on-surface-variant text-xs font-semibold">Preguntas</button>
+</div>
+<!-- Content - Timeline -->
+<main class="relative px-6 py-10">
+<!-- The Vertical Line -->
+<div class="absolute left-10 top-0 bottom-0 w-px dotted-line z-0 opacity-40"></div>
+<div class="space-y-12">
+<!-- ENE -->
+<div class="relative flex items-start gap-6 z-10">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mt-4">ENE</span>
+</div>
+<div class="flex-grow bg-white p-5 rounded-lg shadow-sm border border-surface-container-high">
+<h3 class="text-xl font-bold text-primary leading-tight mb-2">El Letargo Metabólico</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Su corazón late apenas 6 veces por minuto mientras descansa en el fondo marino para conservar energía.</p>
+</div>
+</div>
+<!-- FEB (Subtle Placeholder) -->
+<div class="relative flex items-start gap-6 z-10 opacity-50">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mt-4">FEB</span>
+</div>
+<div class="flex-grow">
+<div class="h-px bg-surface-container-high w-full mt-6"></div>
+</div>
+</div>
+<!-- MAR (Highlighted) -->
+<div class="relative flex items-start gap-6 z-10">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<div class="flex flex-col items-center">
+<span class="text-xs font-black text-primary-container uppercase tracking-widest mt-4">MAR</span>
+<div class="w-2 h-2 rounded-full bg-tertiary mt-2"></div>
+</div>
+</div>
+<div class="flex-grow bg-[#FFF8F2] p-6 rounded-lg shadow-md border-2 border-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-tertiary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<h3 class="text-2xl font-bold text-primary leading-tight">El Encendido Solar</h3>
+</div>
+<p class="text-sm text-on-surface font-medium leading-relaxed">
+                        Emergen a la superficie para el <span class="italic text-primary">basking</span>. El sol activa la síntesis de vitamina D3 y marca el despertar biológico antes de la migración.
+                    </p>
+<div class="mt-4 aspect-video rounded-md overflow-hidden border border-primary-container/20">
+<img alt="Sea turtle at surface" class="w-full h-full object-cover" data-alt="Close-up of a loggerhead sea turtle floating at the ocean surface with sunlight reflecting on its wet carapace at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf8mn8Ac-NT0bkja-6CwVjnNvKdTiykKUOJlnFEb38nFtJELGH4X195lVV_7PSXTsqZN96zKkdv_s_p6fFyCI-a95_JnR2gh8XE1XqFQi3RSVl5p9fhVMnT5qLyXqzC7yaagRrM5rUGpAgzBnfZT_VLG9B3xXJK8tyYnTOLZ6552EBEAPcFG_Ic1xWO96KRddgNClQ8HOTjiGKkNkmTs70HDsuLBbqcla1lWUIEZX6AtKP1zedrAL5WwDGole4FTCZj3wbhjtkYBeB"/>
+</div>
+</div>
+</div>
+<!-- JUN -->
+<div class="relative flex items-start gap-6 z-10">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mt-4">JUN</span>
+</div>
+<div class="flex-grow bg-white p-5 rounded-lg shadow-sm border border-surface-container-high">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary leading-tight">El Maratón de la Playa</h3>
+<span class="bg-tertiary/10 text-tertiary text-[10px] font-bold px-2 py-0.5 rounded-full">ANIDACIÓN</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Las hembras regresan a su playa de nacimiento para depositar entre 80 y 120 huevos bajo la arena cálida.</p>
+</div>
+</div>
+<!-- AGO -->
+<div class="relative flex items-start gap-6 z-10">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mt-4">AGO</span>
+</div>
+<div class="flex-grow bg-white p-5 rounded-lg shadow-sm border border-surface-container-high border-l-4 border-l-tertiary">
+<h3 class="text-xl font-bold text-primary leading-tight mb-2">La Carrera por la Vida</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-3">Nacimientos masivos. La facilitación social permite que las crías salgan del nido juntas, aumentando su probabilidad de supervivencia.</p>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+<img alt="Hatchling" data-alt="Tiny baby sea turtle hatchling making its way across golden sand toward the blue ocean waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8KowRsLZmvIyMKW8PI6iHFx2Nv_pLKhHrLu42mSYZjl-A-LzetgfCWZQE9HRLzYxZ0rVCsa9hvBHVdXRU_fz7cYP0fqaJWg09TcWGBDeTa43sxclxzxfKQ_IOTgI-CDJPLtHIRNBhL_W7vLTpaOIWMKvHvpthvjmXdz6Fq57mArKHHuUcXgkECW5eIb2FqrWgBSxER8qivj4fFZIG110cKqPjbjhcLrt3Mv1qExpHlygYMcpQ_9gD7p56W2wQnM6YGriTAtu78Hqm"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+<img alt="Turtle head" data-alt="Detail of a sea turtle head showing the ancient texture of its skin and scales underwater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdh86UEOxfRNc6mAAF7uRyU0eXUFKEsyw3z4XEN9OdgH_7hdx3e9tNAxSpMty1CZhTty0LMVa4EUoJX7f3wwtGg9HfC6oLcA5Isb4ni6zW0BfkOxwIaT02red2tQ2bjnDV1dy0vhAp1Lz4xDUoRmbbjSRqY87arqN8o9Fbz75yyhaMIdZKCAAHRYv6Pi7VxZ4CtoMLCFf-KrA01sH7Qk7JN5vRhisodeCr1dI2RRUvy1HRAYj47QsoqTwwHyKDu8JsjMjYAgsa_-xi"/>
+</div>
+</div>
+</div>
+</div>
+<!-- DIC -->
+<div class="relative flex items-start gap-6 z-10">
+<div class="w-8 flex-shrink-0 flex justify-center">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest mt-4">DIC</span>
+</div>
+<div class="flex-grow bg-white p-5 rounded-lg shadow-sm border border-surface-container-high">
+<h3 class="text-xl font-bold text-primary leading-tight mb-2">El Arrecife Viviente</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Su caparazón actúa como una isla móvil para epibiontes; crustáceos y algas viajan miles de kilómetros con ella.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center px-4 py-3 pb-6 bg-[#FFF8F2] dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-lg z-50 rounded-t-[40px]">
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-6 py-2 hover:text-[#1A6B72] transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-xs font-medium mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-6 py-2 hover:text-[#1A6B72] transition-colors">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Inter'] text-xs font-medium mt-1">Explorar</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1A6B72] text-white rounded-full px-6 py-2 shadow-inner">
+<span class="material-symbols-outlined" data-icon="diversity_1" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+<span class="font-['Inter'] text-xs font-medium mt-1">Mis Apoyos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] dark:text-slate-400 px-6 py-2 hover:text-[#1A6B72] transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-xs font-medium mt-1">Perfil</span>
+</div>
+</nav>
+</body></html>

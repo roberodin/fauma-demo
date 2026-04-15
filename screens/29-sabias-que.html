@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#eee7e1",
+                    "secondary": "#535f71",
+                    "on-background": "#1e1b18",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1e1b18",
+                    "inverse-surface": "#33302c",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#a1443d",
+                    "surface-bright": "#fff8f2",
+                    "on-secondary-fixed": "#101c2c",
+                    "surface-container": "#f3ede7",
+                    "on-secondary-container": "#596577",
+                    "on-tertiary-fixed-variant": "#7e2a25",
+                    "surface-dim": "#dfd9d3",
+                    "outline": "#6f797a",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#822d28",
+                    "secondary-container": "#d7e3f9",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#ffd3cf",
+                    "surface-container-low": "#f9f2ec",
+                    "on-primary-fixed-variant": "#004f55",
+                    "primary-fixed-dim": "#8bd2da",
+                    "primary": "#005258",
+                    "surface": "#fff8f2",
+                    "outline-variant": "#bec8c9",
+                    "inverse-on-surface": "#f6f0ea",
+                    "surface-tint": "#15686f",
+                    "on-primary-container": "#a1e9f1",
+                    "primary-fixed": "#a6eff6",
+                    "on-tertiary-fixed": "#410003",
+                    "on-surface-variant": "#3f484a",
+                    "on-primary-fixed": "#002022",
+                    "primary-container": "#1a6b72",
+                    "on-secondary-fixed-variant": "#3c4859",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdad6",
+                    "surface-container-highest": "#e8e1dc",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e8e1dc",
+                    "inverse-primary": "#8bd2da",
+                    "background": "#fff8f2",
+                    "secondary-fixed": "#d7e3f9",
+                    "secondary-fixed-dim": "#bbc7dc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FFF8F2;
+            font-family: 'Inter', sans-serif;
+            color: #1e1b18;
+        }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#FFF8F2] dark:bg-slate-900 border-b border-[#535F71]/10 flex items-center px-4 h-16 w-full fixed top-0 z-40 transition-opacity duration-200 active:opacity-70">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#1A6B72] dark:text-teal-400">arrow_back</span>
+<h1 class="font-serif font-bold text-xl italic text-[#1A6B72] dark:text-teal-400">Caretta caretta</h1>
+</div>
+</header>
+<main class="mt-16 px-4 pt-6">
+<!-- Species Tab Bar -->
+<nav class="flex overflow-x-auto gap-6 border-b border-outline-variant/30 pb-2 mb-6 scrollbar-hide">
+<button class="whitespace-nowrap text-secondary font-medium px-1">Ficha Técnica</button>
+<button class="whitespace-nowrap text-secondary font-medium px-1">Galería</button>
+<button class="whitespace-nowrap text-[#1A6B72] font-bold border-b-2 border-[#1A6B72] px-1 pb-2">Curiosidades</button>
+<button class="whitespace-nowrap text-secondary font-medium px-1">Diario de Salud</button>
+</nav>
+<!-- Sub-Tabs (Curiosidades Sections) -->
+<div class="flex flex-wrap gap-2 mb-8">
+<button class="px-4 py-2 rounded-full border border-outline-variant text-secondary text-sm font-medium">Ciclo de Vida</button>
+<button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-bold">Sabías qué</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-secondary text-sm font-medium">Mitos</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-secondary text-sm font-medium">Preguntas</button>
+</div>
+<!-- Curiosidades Content -->
+<div class="space-y-6">
+<!-- January (Expanded) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-serif text-2xl font-bold text-primary italic">Enero</h2>
+<span class="material-symbols-outlined text-primary">expand_less</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-lg p-6 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5">
+<span class="material-symbols-outlined text-9xl">public</span>
+</div>
+<div class="flex items-start gap-4 mb-3">
+<div class="bg-primary/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<h3 class="font-serif text-xl font-bold leading-tight">¿Sabías que el Mediterráneo es un albergue internacional para las tortugas?</h3>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">
+                        Las 'Locales' del Este (Grecia, Turquía) y las 'Turistas' Atlánticas (Florida, Cabo Verde) conviven aquí durante el invierno, compartiendo áreas de alimentación.
+                    </p>
+<div class="flex justify-end">
+<button class="bg-[#F4847A] text-white px-4 py-1.5 rounded-full flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">share</span> Compartir
+                        </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-lg p-6 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5">
+<span class="material-symbols-outlined text-9xl" style="font-variation-settings: 'FILL' 1;">genetics</span>
+</div>
+<div class="flex items-start gap-4 mb-3">
+<div class="bg-primary/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">genetics</span>
+</div>
+<h3 class="font-serif text-xl font-bold leading-tight">¿Sabías que llevan su pasaporte y diario de viaje grabados en el cuerpo?</h3>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">
+                        Su ADN mitocondrial funciona como un código de barras de origen, mientras que los isótopos estables en su caparazón revelan las rutas migratorias que han seguido.
+                    </p>
+<div class="flex justify-end">
+<button class="bg-[#F4847A] text-white px-4 py-1.5 rounded-full flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">share</span> Compartir
+                        </button>
+</div>
+</div>
+</section>
+<!-- Separator -->
+<hr class="border-outline-variant/20"/>
+<!-- February (Collapsed) -->
+<div class="flex items-center justify-between py-2">
+<h2 class="font-serif text-2xl font-bold text-secondary italic">Febrero</h2>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<!-- March (Collapsed) -->
+<div class="flex items-center justify-between py-2">
+<h2 class="font-serif text-2xl font-bold text-secondary italic">Marzo</h2>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<!-- April (Collapsed) -->
+<div class="flex items-center justify-between py-2">
+<h2 class="font-serif text-2xl font-bold text-secondary italic">Abril</h2>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+</div>
+<!-- Decorative Image Context -->
+<div class="mt-12 rounded-xl overflow-hidden shadow-sm h-48 relative">
+<img alt="Sea turtle" class="w-full h-full object-cover" data-alt="cinematic underwater shot of a loggerhead sea turtle swimming through clear turquoise water with sunbeams piercing the surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx6_vpQfpfLSmGJzzpJZ1khEg3HUxygaC_d36CFXfr33ZijP-Fwc1hyCeR3J56lAwdRs3PyyymoXJvOgYMnrkhju4D5uG4nrFaKaujbm5MFVw-9NG1_VUMbuxKqV8joquSINs3QYsQa9TATtmeNrIIuDn4fHRTfdVotk63CJj-DGbzDxnki_bC6__nLNFYPSDJ_VFqE4V1bVYaHueLPITzLEcMxOTqlYz0AU_ZwpNBZh3yXzNdDcnJhmz1vUruzc_yiyS6s81Kb8uC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-white font-serif italic text-lg">Curiosidades marinas</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#FFF8F2] dark:bg-slate-900 border-t border-[#535F71]/10 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-3 rounded-t-[40px]">
+<div class="flex flex-col items-center justify-center text-[#535F71] p-2 hover:text-[#F4847A] scale-95 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="font-sans text-xs Inter">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] p-2 hover:text-[#F4847A] scale-95 transition-transform">
+<span class="material-symbols-outlined">pets</span>
+<span class="font-sans text-xs Inter">Especies</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#1A6B72] text-[#FFF8F2] rounded-full px-5 py-1 scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-sans text-xs Inter">Mis Apoyos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#535F71] p-2 hover:text-[#F4847A] scale-95 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-xs Inter">Perfil</span>
+</div>
+</nav>
+</body></html>

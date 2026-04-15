@@ -239,7 +239,7 @@
 <div class="sidebar">
   <div class="sidebar-header">
     <h1>FAUMA</h1>
-    <p>Prototipo navegable &middot; 25 pantallas</p>
+    <p>Prototipo navegable &middot; 33 pantallas</p>
   </div>
   <div id="screen-list"></div>
   <div class="shortcuts">
@@ -317,6 +317,14 @@ const screens = [
   { file: '17-animal-galeria.html',  title: 'Mi Animal - Galeria',            flow: 'Mi Animal' },
   { file: '18-curiosidades.html',    title: 'Curiosidades',                   flow: 'Mi Animal' },
   { file: '19-bitacora-salud.html',  title: 'Bitacora Veterinaria',           flow: 'Mi Animal' },
+  { file: '26-ficha-tecnica-caretta.html', title: 'Ficha Técnica',            flow: 'Especie (Caretta)' },
+  { file: '27-galeria-caretta.html',       title: 'Galería Multimedia',       flow: 'Especie (Caretta)' },
+  { file: '28-ciclo-vida.html',            title: 'Ciclo de Vida',            flow: 'Especie (Caretta)' },
+  { file: '29-sabias-que.html',            title: 'Sabías Qué',              flow: 'Especie (Caretta)' },
+  { file: '30-mitos-realidad.html',        title: 'Mitos vs Realidad',        flow: 'Especie (Caretta)' },
+  { file: '31-preguntas.html',             title: 'Preguntas Q&A',            flow: 'Especie (Caretta)' },
+  { file: '32-enciclopedia-salud.html',    title: 'Enciclopedia Veterinaria', flow: 'Diario de Salud' },
+  { file: '33-diario-veterinaria.html',    title: 'Diario Veterinaria',       flow: 'Diario de Salud' },
   { file: '20-proyecto-ficha.html',  title: 'Mi Proyecto - Ficha',            flow: 'Mi Proyecto' },
   { file: '21-profundizando.html',   title: 'Mi Proyecto - Profundizando',    flow: 'Mi Proyecto' },
   { file: '22-equipo.html',          title: 'Mi Proyecto - Equipo',           flow: 'Mi Proyecto' },
@@ -365,7 +373,7 @@ function buildDots() {
 // ===== MENU DRAWER (mobile) =====
 function buildMenu() {
   const drawer = document.getElementById('menu-drawer');
-  let html = '<div class="sidebar-header"><h1 style="font-size:18px;font-weight:700;color:#1A6B72;letter-spacing:2px">FAUMA</h1><p style="font-size:11px;color:#888;margin-top:4px">25 pantallas</p></div>';
+  let html = '<div class="sidebar-header"><h1 style="font-size:18px;font-weight:700;color:#1A6B72;letter-spacing:2px">FAUMA</h1><p style="font-size:11px;color:#888;margin-top:4px">33 pantallas</p></div>';
   let currentFlow = '';
   screens.forEach((s, i) => {
     if (s.flow !== currentFlow) {

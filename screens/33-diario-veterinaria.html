@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,600;1,6..72,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1e1b18",
+                        "surface-container": "#f3ede7",
+                        "secondary-fixed": "#d7e3f9",
+                        "secondary-fixed-dim": "#bbc7dc",
+                        "on-tertiary-container": "#ffd3cf",
+                        "primary-fixed": "#a6eff6",
+                        "on-secondary-fixed-variant": "#3c4859",
+                        "on-secondary-container": "#596577",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#822d28",
+                        "tertiary-container": "#a1443d",
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-variant": "#e8e1dc",
+                        "surface": "#fff8f2",
+                        "on-primary-container": "#a1e9f1",
+                        "on-background": "#1e1b18",
+                        "surface-container-low": "#f9f2ec",
+                        "tertiary-fixed": "#ffdad6",
+                        "secondary-container": "#d7e3f9",
+                        "primary-fixed-dim": "#8bd2da",
+                        "primary-container": "#1a6b72",
+                        "on-tertiary-fixed-variant": "#7e2a25",
+                        "primary": "#005258",
+                        "on-surface-variant": "#3f484a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f2",
+                        "surface-dim": "#dfd9d3",
+                        "outline-variant": "#bec8c9",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "secondary": "#535f71",
+                        "on-secondary-fixed": "#101c2c",
+                        "inverse-primary": "#8bd2da",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#002022",
+                        "inverse-surface": "#33302c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410003",
+                        "outline": "#6f797a",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f6f0ea",
+                        "background": "#fff8f2",
+                        "surface-tint": "#15686f",
+                        "surface-container-high": "#eee7e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background: #bec8c9;
+            opacity: 0.5;
+        }
+        .last-timeline::before {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen">
+<!-- TOP APP BAR (Shared Component: TopAppBar) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-stone-50 dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 h-16">
+<div class="flex items-center gap-4">
+<button class="active:opacity-70 transition-all duration-200 text-teal-800 dark:text-teal-400">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl italic font-headline font-semibold text-teal-900 dark:text-teal-100">Caretta caretta</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-teal-800/20">
+<img alt="User profile" data-alt="professional portrait of a young woman veterinarian with a kind expression and soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANsFpqtjBB9mAjk2LGFC-Kp6qwalYtCxjM20Kj7SLlLAUlP6JgSwjfnQGwRkOQJdkqUsFcw_aS4xVcCqFR3DeoD4xJ-vSwegmThpZxxWsrGyoB1w0HewV--WM4SibJEFwauAXOsByUmlvyprqbvKdNfAsKjAIT6KIQVa_36pn5v6gqGoWs3k4K8lN3tWNx2Se7pmyt2lq5DROzRkjqiMgBwm2HWqX4cfosTCpCwCDcm2UeeiZ83BFYLwJbO8j8NMV5DMn0oUIf5g5l"/>
+</div>
+</header>
+<main class="pt-20 pb-32">
+<!-- SECTION TABS -->
+<nav class="flex overflow-x-auto whitespace-nowrap px-6 gap-6 no-scrollbar border-b border-surface-container-high pb-0.5">
+<button class="pb-3 text-sm text-stone-500 font-medium">Ficha Técnica</button>
+<button class="pb-3 text-sm text-stone-500 font-medium">Galería</button>
+<button class="pb-3 text-sm text-stone-500 font-medium">Curiosidades</button>
+<button class="pb-3 text-sm text-teal-700 dark:text-teal-300 font-semibold border-b-2 border-teal-700">Diario de Salud</button>
+</nav>
+<!-- SUB-TABS -->
+<div class="flex justify-center mt-6 px-6">
+<div class="inline-flex bg-surface-container-low p-1.5 rounded-full w-full max-w-sm">
+<button class="flex-1 py-2 text-sm font-medium text-stone-500 rounded-full">Enciclopedia</button>
+<button class="flex-1 py-2 text-sm font-bold text-white bg-primary rounded-full shadow-sm">Diario Veterinaria</button>
+</div>
+</div>
+<!-- SUMMARY CARD -->
+<div class="px-6 mt-6">
+<div class="bg-surface-container-low p-5 rounded-lg border border-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider text-secondary font-bold">Estado</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+<span class="font-semibold text-teal-900">Recuperación</span>
+</div>
+</div>
+<div class="bg-primary/10 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/50 p-3 rounded-DEFAULT">
+<p class="text-[10px] text-secondary font-medium uppercase">Peso actual</p>
+<p class="text-lg font-bold text-on-surface">112 kg</p>
+</div>
+<div class="bg-white/50 p-3 rounded-DEFAULT">
+<p class="text-[10px] text-secondary font-medium uppercase">Último control</p>
+<p class="text-sm font-semibold text-on-surface mt-1">Hace 2 semanas</p>
+</div>
+</div>
+</div>
+</div>
+<!-- VETERINARY LOGBOOK FEED -->
+<section class="mt-8 px-6 space-y-8 relative">
+<!-- Entry 1 -->
+<div class="relative pl-10 timeline-line">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-white" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-surface-container shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="text-[10px] font-bold text-tertiary mb-0.5">MARZO 2027</p>
+<h3 class="font-headline text-lg font-semibold text-on-surface">Revisión trimestral</h3>
+</div>
+<div class="flex items-center gap-1.5 text-green-700 bg-green-50 px-2 py-1 rounded-full text-xs font-bold">
+<span>112kg</span>
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<img alt="Dra. Elena avatar" class="w-6 h-6 rounded-full" data-alt="close up avatar of a professional female doctor in scrubs with a warm approachable look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdhfrlIspCLu7H_6iqXpaatHHVLp9PmIAjTKkMhV2fA9XImGa9zf2jmGo-6OF9iZdO-hIXb0WVjNa6lGTXMaGcsXntoNQM2kAZHiiYavcjmiHrW-Rmo42t8ynSNsVS2sWO2a7yWZbD63WNt4OAYflydc0Nesm24kb0KE0FirWgOiiOv3_OwpUVWaAOUqVAntbA6vJCQuKjJi8QTrWmZp3mkoyJyDSRx-itaTyv3_eZfhouN4Q1zzTN0r_QJQoW9Ml-d5fbtBe1rYFv"/>
+<span class="text-xs font-medium text-stone-600">Dra. Elena</span>
+</div>
+<p class="text-sm text-stone-700 leading-relaxed mb-4">
+                        Herida aleta posterior cicatrizando correctamente. Analítica normal. Se observa buen apetito.
+                    </p>
+<div class="rounded-DEFAULT overflow-hidden h-32 w-full">
+<img alt="Turtle tank" class="w-full h-full object-cover" data-alt="close up of a sea turtle swimming in a crystal clear medical observation tank in a marine conservation facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLZ8qhO4mReG5kjN7P09Lc42kDhufIRGhsa09y5ykrAz5XlTdfc3u_kH0x0AXK6yJsrzjhERX5M-GmJfXOwLB8fW4NSfa9xVrcNVid91RxxjC2cJAN18RJD_dnFLVxKvNuOjqTlCHrnirdQ5pElPZWd2PbrMtqXjU7HEpE5W3lNnxAUXcFRVYiucCmh0jjRL4yO16rJD16wGOO7iwFyov3Y5GojyJPMzLOnKCh3N9FI5njvuYVl672SvMvS36YcEKxYHloUeMfbof3"/>
+</div>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="relative pl-10 opacity-80 timeline-line">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-outline-variant flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-white">history</span>
+</div>
+<div class="bg-surface-container-lowest/60 p-4 rounded-lg border border-surface-container">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="text-[10px] font-bold text-secondary mb-0.5 uppercase">Diciembre 2026</p>
+<h3 class="font-headline text-lg font-semibold text-stone-600">Control post-temporada</h3>
+</div>
+<div class="text-stone-500 bg-stone-100 px-2 py-1 rounded-full text-xs font-bold">
+                            108kg
+                        </div>
+</div>
+<p class="text-sm text-stone-600 leading-relaxed italic">
+                        Recuperación tras temporada reproductiva. Suplemento vitamínico administrado. Sin anomalías detectadas.
+                    </p>
+</div>
+</div>
+<!-- Entry 3 (Locked) -->
+<div class="relative pl-10 last-timeline">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-stone-200 flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[14px] text-stone-500">lock</span>
+</div>
+<div class="relative bg-surface-container-low p-4 rounded-lg border border-dashed border-stone-300 overflow-hidden">
+<div class="blur-[2px] pointer-events-none select-none opacity-40">
+<p class="text-[10px] font-bold text-secondary mb-0.5">OCTUBRE 2026</p>
+<h3 class="font-headline text-lg font-semibold">Ingreso inicial por pesca</h3>
+<p class="text-sm">Evaluación de traumatismo por red de arrastre...</p>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-surface-container/20 p-4 text-center">
+<div class="bg-tertiary text-white text-[10px] font-bold px-2 py-1 rounded-full mb-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            Disponible en nivel Héroe
+                        </div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md active:scale-95 transition-transform">
+                            Actualizar a Héroe
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BOTTOM NAVBAR (Shared Component: BottomNavBar) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-lg border-t border-stone-200 dark:border-stone-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-[32px]">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-teal-700 dark:hover:text-teal-300 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-sans Inter font-medium text-[11px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-teal-700 dark:hover:text-teal-300 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-sans Inter font-medium text-[11px] mt-1">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-teal-800 text-stone-50 dark:bg-teal-600 dark:text-white rounded-full px-6 py-2 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+<span class="font-sans Inter font-medium text-[11px] mt-1">Mis Apoyos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-teal-700 dark:hover:text-teal-300 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans Inter font-medium text-[11px] mt-1">Perfil</span>
+</a>
+</nav>
+</body></html>
